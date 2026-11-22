@@ -108,3 +108,12 @@ svg .qmark { fill: var(--ink); }
 .lost img { width: 220px; max-width: 60vw; height: auto; }
 .lost h1 { font-size: clamp(2rem, 6vw, 3rem); margin: .3em 0 .2em; }
 .lost p { color: var(--muted); font-size: 1.15rem; }
+
+/* app screenshots */
+.shot { margin: 0; }
+.shot img { display: block; width: 100%; height: auto; border-radius: 12px;
+            box-shadow: 0 18px 48px rgba(59, 42, 30, .18); }
+.shot-main { margin: 24px 0 32px; }
+.shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+.shot figcaption { margin-top: 10px; color: var(--muted); font-size: .95rem; text-align: center; }
+.fine { margin-top: 20px; color: var(--muted); font-size: .9rem; text-align: center; }
