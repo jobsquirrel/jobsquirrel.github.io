@@ -1,0 +1,110 @@
+/* Patrick Hand by Patrick Wagesreiter, SIL Open Font License 1.1 (fonts/OFL.txt) */
+@font-face { font-family: "Patrick Hand"; src: url("fonts/PatrickHand-Regular.ttf") format("truetype"); font-display: swap; }
+:root {
+  color-scheme: light dark;
+  --bg: #fffaf3; --card: #ffffff; --fg: #2b2118; --muted: #6f604f;
+  --accent: #b5651d; --accent-fg: #ffffff; --line: #eadfce; --ink: #3b2a1e;
+  --hand: "Patrick Hand", "Marker Felt", "Chalkboard SE", cursive;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1d1813; --card: #27201a; --fg: #f3ebe1; --muted: #b3a492;
+    --accent: #e0954a; --accent-fg: #1d1813; --line: #3a3027; --ink: #f3ebe1;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg);
+       font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+a { color: var(--accent); }
+h1, h2, h3, .brand, .btn, .step, summary { font-family: var(--hand); font-weight: 400; }
+.wrap { max-width: 62rem; margin: 0 auto; padding: 0 16px; }
+
+header.top { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; }
+.brand { display: flex; align-items: center; gap: 8px; font-size: 1.5rem; text-decoration: none; color: var(--fg); }
+nav a { margin-left: 1.2rem; color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--accent); }
+
+/* hand-drawn borders */
+.card, details, .btn {
+  border: 2.5px solid var(--ink);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+}
+.card { background: var(--card); padding: 20px; }
+.card h3 { margin: .2em 0 .2em; font-size: 1.4rem; }
+.card p { margin: 0; color: var(--muted); }
+.card .icon { font-size: 1.8rem; }
+.step { font-size: 1.6rem; color: var(--accent); line-height: 1; }
+
+.hero { text-align: center; padding: 32px 16px 64px; }
+.hero-sq { width: 260px; max-width: 70vw; height: auto; cursor: pointer; }
+.hero h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); line-height: 1.15; margin: .2em 0 .3em; }
+.hero h1 u { text-decoration: none; white-space: nowrap; padding-bottom: 6px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12'%3E%3Cpath d='M2 8 C50 2 120 12 198 5' fill='none' stroke='%23d07a32' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") bottom / 100% 12px no-repeat; }
+.hero p { color: var(--muted); font-size: 1.15rem; max-width: 36rem; margin: 0 auto; }
+.cta { margin-top: 28px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.btn { display: inline-block; padding: .45em 1.3em; font-size: 1.2rem; text-decoration: none; box-shadow: 3px 3px 0 var(--ink); }
+.btn.primary { background: #d07a32; color: #fff; }
+.btn.ghost { background: var(--card); color: var(--fg); }
+.btn[aria-disabled="true"] { cursor: default; }
+.hero .note { margin-top: 22px; font-family: var(--hand); font-size: 1.2rem; color: var(--accent); }
+
+section { padding: 48px 0; border-top: 1px dashed var(--line); }
+section h2 { font-size: 2.1rem; margin: 0 0 .2em; }
+section .lead { color: var(--muted); margin-top: 0; max-width: 40rem; }
+.grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); margin-top: 24px; }
+
+.steps { display: flex; align-items: center; gap: 8px; margin-top: 24px; }
+.steps .card { flex: 1; }
+.steps .arrow { width: 46px; flex: none; }
+@media (max-width: 720px) {
+  .steps { flex-direction: column; align-items: stretch; }
+  .steps .arrow { transform: rotate(90deg); align-self: center; }
+}
+
+.statuses { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr)); margin-top: 24px; }
+.status { text-align: center; padding: 12px 12px 16px; }
+.status .sq { width: 100%; max-width: 180px; height: auto; display: block; margin: 0 auto; }
+
+details { background: var(--card); padding: 12px 18px; margin-top: 12px; }
+summary { font-size: 1.25rem; cursor: pointer; }
+details p { color: var(--muted); margin: .4em 0 0; }
+
+footer { border-top: 1px dashed var(--line); padding: 28px 0 40px; color: var(--muted); font-size: .9rem; }
+footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+@media (max-width: 520px) { nav { display: none; } }
+
+/* squirrel drawing */
+.ink, .pink { fill: none; stroke: var(--ink); stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+.pink { stroke: #3b2a1e; }  /* lines on the white paper stay dark in dark mode */
+.thin { stroke-width: 2; }
+.fur { fill: #d07a32; } .tail { fill: #c06a26; } .belly { fill: #f6dcb3; }
+.nut { fill: #b98048; } .cap { fill: #6e4a2a; } .cheek { fill: #f2a08a; opacity: .7; }
+.dot { fill: #2b1d14; } .shine, .paper { fill: #fff; }
+svg .hand { font-family: var(--hand); fill: #3b2a1e; }
+svg .qmark { fill: var(--ink); }
+.steps .arrow .ink { stroke: var(--ink); }
+
+/* squirrel animation: blink, wag on hover, acorn drop on click */
+.hero-sq .eye { transform-box: fill-box; transform-origin: center; animation: blink 4s infinite; }
+@keyframes blink { 0%, 90%, 100% { transform: scaleY(1); } 93% { transform: scaleY(.1); } }
+.hero-sq .tailg { transform-box: view-box; transform-origin: 128px 160px; }
+.hero-sq:hover .tailg { animation: wag .5s ease-in-out 3; }
+@keyframes wag { 0%, 100% { transform: rotate(0); } 30% { transform: rotate(-7deg); } 70% { transform: rotate(5deg); } }
+.hero-sq .drop { opacity: 0; transform-box: view-box; transform-origin: 150px 40px; }
+.hero-sq .drop.falling { animation: fall 1.3s cubic-bezier(.5, 0, .6, 1) forwards; }
+@keyframes fall {
+  0% { transform: translate(0, -60px) rotate(0); opacity: 1; }
+  55% { transform: translate(0, 118px) rotate(200deg); }
+  70% { transform: translate(6px, 100px) rotate(240deg); }
+  85% { transform: translate(10px, 118px) rotate(270deg); opacity: 1; }
+  100% { transform: translate(10px, 118px) rotate(270deg); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-sq .eye, .hero-sq:hover .tailg { animation: none; }
+}
+
+/* 404 */
+.lost { min-height: 80vh; display: grid; place-items: center; text-align: center; padding: 32px 16px; }
+.lost img { width: 220px; max-width: 60vw; height: auto; }
+.lost h1 { font-size: clamp(2rem, 6vw, 3rem); margin: .3em 0 .2em; }
+.lost p { color: var(--muted); font-size: 1.15rem; }

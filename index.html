@@ -4,27 +4,284 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>JobSquirrel</title>
-<meta name="description" content="JobSquirrel: save job ads before they disappear, and track your applications. Free, open source, and your data stays on your computer.">
-<style>
-  :root { color-scheme: light dark; --bg:#fffaf3; --fg:#2b2118; --muted:#7a6a5a; --accent:#b5651d; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#1d1813; --fg:#f3ebe1; --muted:#b3a492; --accent:#e0954a; } }
-  body { margin:0; min-height:100vh; display:grid; place-items:center; background:var(--bg); color:var(--fg);
-         font:18px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; padding:16px; box-sizing:border-box; }
-  main { max-width:36rem; text-align:center; }
-  .logo { font-size:4rem; }
-  h1 { margin:.2em 0; font-size:2.4rem; }
-  p { color:var(--muted); }
-  .soon { display:inline-block; margin-top:1rem; padding:.3em .9em; border:2px solid var(--accent);
-          border-radius:999px; color:var(--accent); font-weight:600; }
-</style>
+<meta name="description" content="JobSquirrel saves job ads from Seek, Trade Me Jobs and LinkedIn before they disappear, and keeps track of every application. Free, open source, and your data stays on your computer.">
+<link rel="icon" href="squirrel.svg" type="image/svg+xml">
+<meta property="og:title" content="JobSquirrel">
+<meta property="og:description" content="Save job ads before they disappear, and keep track of every application. Your data stays on your computer.">
+<meta property="og:url" content="https://jobsquirrel.nz/">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/"><img src="squirrel.svg" alt="" width="40" height="33"> JobSquirrel</a>
+    <nav aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+</div>
+
 <main>
-  <div class="logo" aria-hidden="true">🐿️</div>
-  <h1>JobSquirrel</h1>
-  <p>Stash job ads before they disappear, and keep track of every application.<br>
-     Free and open source. Your data stays on your computer.</p>
-  <span class="soon">Coming soon</span>
+  <div class="wrap hero">
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="rough" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="3.5"/></filter></svg>
+<svg viewBox="10 10 190 175" class="sq hero-sq" role="img" aria-label="A hand-drawn squirrel holding a job ad. Click it to drop an acorn."><g filter="url(#rough)">
+<g class="tailg"><path class="tail" transform="translate(2.5 2)" d="M118 166 C176 166 194 110 178 74 C164 42 124 28 110 52 C102 67 117 78 132 72 C152 66 158 100 148 126 C140 146 126 152 112 151 Z"/><path class="ink" d="M118 166 C176 166 194 110 178 74 C164 42 124 28 110 52 C102 67 117 78 132 72 C152 66 158 100 148 126 C140 146 126 152 112 151"/>
+<path class="ink thin" d="M163 70 C172 90 170 118 158 140 M150 50 C158 54 164 60 168 68 M126 45 C132 42 140 43 146 46"/></g>
+<g transform="translate(2.5 2)"><path class="fur" d="M68 172 C58 140 68 106 94 101 C122 98 132 132 126 172 Z"/><path class="fur" d="M56 93 C50 80 59 61 80 60 C99 60 107 75 105 89 C103 103 90 109 78 107 C67 106 61 101 56 93 Z"/><path class="fur" d="M83 63 L88 42 L97 65 Z"/><path class="belly" d="M82 170 C77 146 83 122 99 120 C112 122 114 146 110 170 Z"/></g>
+<path class="ink" d="M68 172 C58 140 68 106 94 101 C122 98 132 132 126 172"/><path class="ink" d="M56 93 C50 80 59 61 80 60 C99 60 107 75 105 89 C103 103 90 109 78 107 C67 106 61 101 56 93 Z"/>
+<path class="ink" d="M83 63 L88 42 L97 65 M88 42 L86 36 M88 42 L92 37"/>
+<path class="ink thin" d="M88 140 C86 152 87 162 90 170 M104 138 C107 150 107 160 104 170"/>
+<ellipse class="cheek" cx="85" cy="93" rx="6" ry="4"/>
+<g class="eye"><circle class="dot" cx="74" cy="80" r="4"/><circle class="shine" cx="75.5" cy="78.5" r="1.3"/></g>
+<circle class="dot" cx="55" cy="90" r="2.8"/>
+<path class="ink thin" d="M60 97 C63 100 67 100 69 98"/>
+<path class="paper" d="M50 110 L82 106 L86 150 L54 154 Z"/>
+<path class="pink" d="M50 110 L82 106 L86 150 L54 154 Z"/>
+<text class="hand" x="56" y="124" font-size="10" transform="rotate(-7 66 124)">JOB</text>
+<path class="pink thin" d="M57 132 L79 129 M58 139 L80 136 M59 146 L74 144"/><path class="ink thin" d="M76 122 C82 120 85 126 80 129 M77 136 C83 135 85 141 79 143"/>
+<path class="ink" d="M64 173 C70 167 84 167 90 173 M106 173 C112 167 126 167 132 173"/>
+<path class="ink thin" d="M20 176 C70 172 140 179 192 175"/>
+<g class="drop"><ellipse class="nut" cx="150" cy="44" rx="7" ry="9"/><path class="cap" d="M142 39 C142 31 158 31 158 39 Z"/>
+<ellipse class="ink thin" cx="150" cy="44" rx="7" ry="9"/><path class="ink thin" d="M142 39 C142 31 158 31 158 39 Z"/></g>
+</g></svg>
+    <h1>Stash job ads <u>before they disappear.</u></h1>
+    <p>JobSquirrel saves the job ads you care about from Seek, Trade Me Jobs and LinkedIn with one click, and keeps track of every application. Free, open source, and everything stays on your computer.</p>
+    <div class="cta">
+      <span class="btn primary" aria-disabled="true">Download for macOS — coming soon</span>
+      <a class="btn ghost" href="https://github.com/jobsquirrel">Follow on GitHub</a>
+    </div>
+    <p class="note">New Zealand has no wild squirrels. Now it has one.</p>
+  </div>
+
+  <section id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="lead">A desktop app and a small Chrome extension work together. No account, no sign-up.</p>
+      <div class="steps">
+        <div class="card">
+          <div class="step">1</div>
+          <h3>Spot a job</h3>
+          <p>Browse Seek, Trade Me Jobs or LinkedIn the way you always do.</p>
+        </div>
+        <svg class="arrow" viewBox="0 0 46 30" aria-hidden="true"><path class="ink thin" d="M3 18 C15 8 28 22 40 13 M33 9 L41 13 L35 20" filter="url(#rough)"/></svg>
+        <div class="card">
+          <div class="step">2</div>
+          <h3>Squirrel it away</h3>
+          <p>One click saves the job details and a full copy of the page into the JobSquirrel app.</p>
+        </div>
+        <svg class="arrow" viewBox="0 0 46 30" aria-hidden="true"><path class="ink thin" d="M3 18 C15 8 28 22 40 13 M33 9 L41 13 L35 20" filter="url(#rough)"/></svg>
+        <div class="card">
+          <div class="step">3</div>
+          <h3>Track every application</h3>
+          <p>Add notes, tags and the CV you sent, and move each job along as things happen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="journey">
+    <div class="wrap">
+      <h2>From “ooh” to “I got it!”</h2>
+      <p class="lead">Every job moves through the same five steps. The squirrel has felt all of them.</p>
+      <div class="statuses">
+        <div class="card status"><svg viewBox="10 10 190 175" class="sq " role="img" aria-label="Squirrel looking at a job ad"><g filter="url(#rough)">
+<g class="tailg"><path class="tail" transform="translate(2.5 2)" d="M118 166 C176 166 194 110 178 74 C164 42 124 28 110 52 C102 67 117 78 132 72 C152 66 158 100 148 126 C140 146 126 152 112 151 Z"/><path class="ink" d="M118 166 C176 166 194 110 178 74 C164 42 124 28 110 52 C102 67 117 78 132 72 C152 66 158 100 148 126 C140 146 126 152 112 151"/>
+<path class="ink thin" d="M163 70 C172 90 170 118 158 140 M150 50 C158 54 164 60 168 68 M126 45 C132 42 140 43 146 46"/></g>
+<g transform="translate(2.5 2)"><path class="fur" d="M68 172 C58 140 68 106 94 101 C122 98 132 132 126 172 Z"/><path class="fur" d="M56 93 C50 80 59 61 80 60 C99 60 107 75 105 89 C103 103 90 109 78 107 C67 106 61 101 56 93 Z"/><path class="fur" d="M83 63 L88 42 L97 65 Z"/><path class="belly" d="M82 170 C77 146 83 122 99 120 C112 122 114 146 110 170 Z"/></g>
+<path class="ink" d="M68 172 C58 140 68 106 94 101 C122 98 132 132 126 172"/><path class="ink" d="M56 93 C50 80 59 61 80 60 C99 60 107 75 105 89 C103 103 90 109 78 107 C67 106 61 101 56 93 Z"/>
+<path class="ink" d="M83 63 L88 42 L97 65 M88 42 L86 36 M88 42 L92 37"/>
+<path class="ink thin" d="M88 140 C86 152 87 162 90 170 M104 138 C107 150 107 160 104 170"/>
+<ellipse class="cheek" cx="85" cy="93" rx="6" ry="4"/>
+<g class="eye"><circle class="dot" cx="74" cy="80" r="4"/><circle class="shine" cx="75.5" cy="78.5" r="1.3"/></g>
+<circle class="dot" cx="55" cy="90" r="2.8"/>
+<path class="ink thin" d="M60 97 C63 100 67 100 69 98"/>
+<path class="paper" d="M50 110 L82 106 L86 150 L54 154 Z"/>
+<path class="pink" d="M50 110 L82 106 L86 150 L54 154 Z"/>
+<text class="hand" x="56" y="124" font-size="10" transform="rotate(-7 66 124)">JOB</text>
+<path class="pink thin" d="M57 132 L79 129 M58 139 L80 136 M59 146 L74 144"/><path class="ink thin" d="M76 122 C82 120 85 126 80 129 M77 136 C83 135 85 141 79 143"/>
+<path class="ink" d="M64 173 C70 167 84 167 90 173 M106 173 C112 167 126 167 132 173"/>
+<path class="ink thin" d="M20 176 C70 172 140 179 192 175"/>
+<text class="hand qmark" x="34" y="66" font-size="28">?</text><path class="ink thin" d="M104 52 L110 44 M110 60 L119 57"/>
+</g></svg><h3>Interested</h3><p>Ooh, this one looks good.</p></div>
+        <div class="card status"><svg viewBox="10 10 190 175" class="sq " role="img" aria-label="Squirrel sending off a paper plane"><g filter="url(#rough)">
+<g class="tailg"><path class="tail" transform="translate(2.5 2)" d="M118 166 C176 166 194 110 178 74 C164 42 124 28 110 52 C102 67 117 78 132 72 C152 66 158 100 148 126 C140 146 126 152 112 151 Z"/><path class="ink" d="M118 166 C176 166 194 110 178 74 C164 42 124 28 110 52 C102 67 117 78 132 72 C152 66 158 100 148 126 C140 146 126 152 112 151"/>
+<path class="ink thin" d="M163 70 C172 90 170 118 158 140 M150 50 C158 54 164 60 168 68 M126 45 C132 42 140 43 146 46"/></g>
+<g transform="translate(2.5 2)"><path class="fur" d="M68 172 C58 140 68 106 94 101 C122 98 132 132 126 172 Z"/><path class="fur" d="M56 93 C50 80 59 61 80 60 C99 60 107 75 105 89 C103 103 90 109 78 107 C67 106 61 101 56 93 Z"/><path class="fur" d="M83 63 L88 42 L97 65 Z"/><path class="belly" d="M82 170 C77 146 83 122 99 120 C112 122 114 146 110 170 Z"/></g>
+<path class="ink" d="M68 172 C58 140 68 106 94 101 C122 98 132 132 126 172"/><path class="ink" d="M56 93 C50 80 59 61 80 60 C99 60 107 75 105 89 C103 103 90 109 78 107 C67 106 61 101 56 93 Z"/>
+<path class="ink" d="M83 63 L88 42 L97 65 M88 42 L86 36 M88 42 L92 37"/>
+<path class="ink thin" d="M88 140 C86 152 87 162 90 170 M104 138 C107 150 107 160 104 170"/>
+<ellipse class="cheek" cx="85" cy="93" rx="6" ry="4"/>
+<g class="eye"><circle class="dot" cx="74" cy="80" r="4"/><circle class="shine" cx="75.5" cy="78.5" r="1.3"/></g>
+<circle class="dot" cx="55" cy="90" r="2.8"/>
+<path class="ink thin" d="M60 97 C63 100 67 100 69 98"/>
+<g transform="translate(1.5 1)"><ellipse class="fur" cx="80" cy="126" rx="6" ry="4.5"/><ellipse class="fur" cx="81" cy="136" rx="6" ry="4.5"/></g><ellipse class="ink thin" cx="80" cy="126" rx="6" ry="4.5"/><ellipse class="ink thin" cx="81" cy="136" rx="6" ry="4.5"/>
+<path class="ink" d="M64 173 C70 167 84 167 90 173 M106 173 C112 167 126 167 132 173"/>
+<path class="ink thin" d="M20 176 C70 172 140 179 192 175"/>
+<path class="ink thin" stroke-dasharray="4 6" d="M70 120 C40 110 34 80 46 64"/>
+<path class="paper" d="M26 58 L58 42 L44 66 Z"/><path class="pink thin" d="M26 58 L58 42 L44 66 Z M58 42 L38 60 L44 66"/>
+</g></svg><h3>Applied</h3><p>Off it goes. Fingers crossed.</p></div>
+        <div class="card status"><svg viewBox="10 10 190 175" class="sq " role="img" aria-label="Nervous squirrel in a tie holding a CV"><g filter="url(#rough)">
+<g class="tailg"><path class="tail" transform="translate(2.5 2)" d="M118 166 C176 166 194 110 178 74 C164 42 124 28 110 52 C102 67 117 78 132 72 C152 66 158 100 148 126 C140 146 126 152 112 151 Z"/><path class="ink" d="M118 166 C176 166 194 110 178 74 C164 42 124 28 110 52 C102 67 117 78 132 72 C152 66 158 100 148 126 C140 146 126 152 112 151"/>
+<path class="ink thin" d="M163 70 C172 90 170 118 158 140 M150 50 C158 54 164 60 168 68 M126 45 C132 42 140 43 146 46"/></g>
+<g transform="translate(2.5 2)"><path class="fur" d="M68 172 C58 140 68 106 94 101 C122 98 132 132 126 172 Z"/><path class="fur" d="M56 93 C50 80 59 61 80 60 C99 60 107 75 105 89 C103 103 90 109 78 107 C67 106 61 101 56 93 Z"/><path class="fur" d="M83 63 L88 42 L97 65 Z"/><path class="belly" d="M82 170 C77 146 83 122 99 120 C112 122 114 146 110 170 Z"/></g>
+<path class="ink" d="M68 172 C58 140 68 106 94 101 C122 98 132 132 126 172"/><path class="ink" d="M56 93 C50 80 59 61 80 60 C99 60 107 75 105 89 C103 103 90 109 78 107 C67 106 61 101 56 93 Z"/>
+<path class="ink" d="M83 63 L88 42 L97 65 M88 42 L86 36 M88 42 L92 37"/>
+<path class="ink thin" d="M88 140 C86 152 87 162 90 170 M104 138 C107 150 107 160 104 170"/>
+<ellipse class="cheek" cx="85" cy="93" rx="6" ry="4"/>
+<g class="eye"><circle class="dot" cx="74" cy="80" r="4"/><circle class="shine" cx="75.5" cy="78.5" r="1.3"/></g>
+<circle class="dot" cx="55" cy="90" r="2.8"/>
+<path class="ink thin" d="M60 97 C63 100 67 100 69 98"/>
+<path class="paper" d="M50 110 L82 106 L86 150 L54 154 Z"/>
+<path class="pink" d="M50 110 L82 106 L86 150 L54 154 Z"/>
+<text class="hand" x="56" y="124" font-size="12" transform="rotate(-7 66 124)">CV</text>
+<path class="pink thin" d="M57 132 L79 129 M58 139 L80 136 M59 146 L74 144"/><path class="ink thin" d="M76 122 C82 120 85 126 80 129 M77 136 C83 135 85 141 79 143"/>
+<path class="ink" d="M64 173 C70 167 84 167 90 173 M106 173 C112 167 126 167 132 173"/>
+<path class="ink thin" d="M20 176 C70 172 140 179 192 175"/>
+<path fill="#c0392b" d="M91 106 L99 105 L98 111 L92 111 Z M93 111 L97 111 L102 128 L95 134 L89 127 Z"/>
+<path class="ink thin" d="M91 106 L99 105 L98 111 L92 111 Z M93 111 L97 111 L102 128 L95 134 L89 127 Z"/>
+<path fill="#8fd3ff" d="M110 62 C115 69 115 74 110 74 C105 74 105 69 110 62 Z"/><path class="ink thin" d="M110 62 C115 69 115 74 110 74 C105 74 105 69 110 62 Z"/>
+</g></svg><h3>Interview</h3><p>Tie on. Deep breaths.</p></div>
+        <div class="card status"><svg viewBox="10 10 190 175" class="sq " role="img" aria-label="Squirrel in a party hat holding an offer"><g filter="url(#rough)">
+<g class="tailg"><path class="tail" transform="translate(2.5 2)" d="M118 166 C176 166 194 110 178 74 C164 42 124 28 110 52 C102 67 117 78 132 72 C152 66 158 100 148 126 C140 146 126 152 112 151 Z"/><path class="ink" d="M118 166 C176 166 194 110 178 74 C164 42 124 28 110 52 C102 67 117 78 132 72 C152 66 158 100 148 126 C140 146 126 152 112 151"/>
+<path class="ink thin" d="M163 70 C172 90 170 118 158 140 M150 50 C158 54 164 60 168 68 M126 45 C132 42 140 43 146 46"/></g>
+<g transform="translate(2.5 2)"><path class="fur" d="M68 172 C58 140 68 106 94 101 C122 98 132 132 126 172 Z"/><path class="fur" d="M56 93 C50 80 59 61 80 60 C99 60 107 75 105 89 C103 103 90 109 78 107 C67 106 61 101 56 93 Z"/><path class="fur" d="M83 63 L88 42 L97 65 Z"/><path class="belly" d="M82 170 C77 146 83 122 99 120 C112 122 114 146 110 170 Z"/></g>
+<path class="ink" d="M68 172 C58 140 68 106 94 101 C122 98 132 132 126 172"/><path class="ink" d="M56 93 C50 80 59 61 80 60 C99 60 107 75 105 89 C103 103 90 109 78 107 C67 106 61 101 56 93 Z"/>
+<path class="ink" d="M83 63 L88 42 L97 65 M88 42 L86 36 M88 42 L92 37"/>
+<path class="ink thin" d="M88 140 C86 152 87 162 90 170 M104 138 C107 150 107 160 104 170"/>
+<ellipse class="cheek" cx="85" cy="93" rx="6" ry="4"/>
+<g class="eye"><circle class="dot" cx="74" cy="80" r="4"/><circle class="shine" cx="75.5" cy="78.5" r="1.3"/></g>
+<circle class="dot" cx="55" cy="90" r="2.8"/>
+<path class="ink thin" d="M59 96 C62 104 70 104 72 97"/>
+<path class="paper" d="M50 110 L82 106 L86 150 L54 154 Z"/>
+<path class="pink" d="M50 110 L82 106 L86 150 L54 154 Z"/>
+<text class="hand" x="56" y="124" font-size="8" transform="rotate(-7 66 124)">OFFER!</text>
+<path class="pink thin" d="M57 132 L79 129 M58 139 L80 136 M59 146 L74 144"/><path class="ink thin" d="M76 122 C82 120 85 126 80 129 M77 136 C83 135 85 141 79 143"/>
+<path class="ink" d="M64 173 C70 167 84 167 90 173 M106 173 C112 167 126 167 132 173"/>
+<path class="ink thin" d="M20 176 C70 172 140 179 192 175"/>
+<path fill="#f4c430" d="M60 70 L64 38 L80 61 Z"/><path class="ink thin" d="M60 70 L64 38 L80 61 Z M62 55 L74 52"/><circle fill="#e74c3c" cx="64" cy="36" r="4"/><rect x="30" y="40" width="6" height="3" fill="#e74c3c" transform="rotate(0 30 40)"/><rect x="50" y="22" width="6" height="3" fill="#f4c430" transform="rotate(37 50 22)"/><rect x="112" y="26" width="6" height="3" fill="#3498db" transform="rotate(74 112 26)"/><rect x="40" y="70" width="6" height="3" fill="#2ecc71" transform="rotate(111 40 70)"/><rect x="120" y="12" width="6" height="3" fill="#e74c3c" transform="rotate(148 120 12)"/><rect x="24" y="95" width="6" height="3" fill="#9b59b6" transform="rotate(185 24 95)"/><rect x="100" y="40" width="6" height="3" fill="#f4c430" transform="rotate(222 100 40)"/>
+</g></svg><h3>Offer</h3><p>Party time!</p></div>
+        <div class="card status"><svg viewBox="10 10 190 175" class="sq " role="img" aria-label="Squirrel sighing, holding an acorn"><g filter="url(#rough)">
+<g class="tailg"><path class="tail" transform="translate(2.5 2)" d="M118 166 C176 166 194 110 178 74 C164 42 124 28 110 52 C102 67 117 78 132 72 C152 66 158 100 148 126 C140 146 126 152 112 151 Z"/><path class="ink" d="M118 166 C176 166 194 110 178 74 C164 42 124 28 110 52 C102 67 117 78 132 72 C152 66 158 100 148 126 C140 146 126 152 112 151"/>
+<path class="ink thin" d="M163 70 C172 90 170 118 158 140 M150 50 C158 54 164 60 168 68 M126 45 C132 42 140 43 146 46"/></g>
+<g transform="translate(2.5 2)"><path class="fur" d="M68 172 C58 140 68 106 94 101 C122 98 132 132 126 172 Z"/><path class="fur" d="M56 93 C50 80 59 61 80 60 C99 60 107 75 105 89 C103 103 90 109 78 107 C67 106 61 101 56 93 Z"/><path class="fur" d="M83 63 L88 42 L97 65 Z"/><path class="belly" d="M82 170 C77 146 83 122 99 120 C112 122 114 146 110 170 Z"/></g>
+<path class="ink" d="M68 172 C58 140 68 106 94 101 C122 98 132 132 126 172"/><path class="ink" d="M56 93 C50 80 59 61 80 60 C99 60 107 75 105 89 C103 103 90 109 78 107 C67 106 61 101 56 93 Z"/>
+<path class="ink" d="M83 63 L88 42 L97 65 M88 42 L86 36 M88 42 L92 37"/>
+<path class="ink thin" d="M88 140 C86 152 87 162 90 170 M104 138 C107 150 107 160 104 170"/>
+<ellipse class="cheek" cx="85" cy="93" rx="6" ry="4"/>
+<g class="eye"><circle class="dot" cx="74" cy="80" r="4"/><circle class="shine" cx="75.5" cy="78.5" r="1.3"/></g>
+<circle class="dot" cx="55" cy="90" r="2.8"/>
+<path class="ink thin" d="M62 99 L69 99"/><path class="ink thin" d="M67 71 L80 74"/>
+<g transform="translate(2.5 2)"><ellipse class="nut" cx="70" cy="131" rx="9" ry="11"/><path class="cap" d="M60 124 C60 114 80 114 80 124 Z"/></g>
+<ellipse class="ink" cx="70" cy="131" rx="9" ry="11"/><path class="ink" d="M60 124 C60 114 80 114 80 124 Z M70 115 L71 110"/><path class="ink thin" d="M76 122 C82 120 85 126 80 129 M77 136 C83 135 85 141 79 143"/>
+<path class="ink" d="M64 173 C70 167 84 167 90 173 M106 173 C112 167 126 167 132 173"/>
+<path class="ink thin" d="M20 176 C70 172 140 179 192 175"/>
+<path class="ink thin" d="M40 104 C34 104 34 96 40 97 C40 92 48 92 48 97"/>
+</g></svg><h3>Rejected</h3><p>Plenty more acorns.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <h2>Why a squirrel?</h2>
+      <p class="lead">Job ads vanish when they close, often just before your interview. JobSquirrel keeps your own copy.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="icon" aria-hidden="true">📸</div>
+          <h3>A copy that stays</h3>
+          <p>Every saved job keeps a full snapshot of the ad, so you can reread it after the listing is gone.</p>
+        </div>
+        <div class="card">
+          <div class="icon" aria-hidden="true">🗂️</div>
+          <h3>Board and list views</h3>
+          <p>See every application at a glance, sort them into folders, and filter by status or tag.</p>
+        </div>
+        <div class="card">
+          <div class="icon" aria-hidden="true">📎</div>
+          <h3>Your documents, in one place</h3>
+          <p>Keep the CV and cover letter you sent next to the job you sent them for.</p>
+        </div>
+        <div class="card">
+          <div class="icon" aria-hidden="true">💾</div>
+          <h3>Back up any time</h3>
+          <p>Export your whole library to a single file whenever you like.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <h2>Your data stays with you</h2>
+      <p class="lead">JobSquirrel has no server. It does not send anything off your computer: no analytics, no crash reports, no tracking.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="icon" aria-hidden="true">🏠</div>
+          <h3>Plain files on your computer</h3>
+          <p>Your jobs, snapshots and documents live in a folder you choose. You own it.</p>
+        </div>
+        <div class="card">
+          <div class="icon" aria-hidden="true">👀</div>
+          <h3>Only what you save</h3>
+          <p>The extension only captures the page you are looking at, and only when you click save.</p>
+        </div>
+        <div class="card">
+          <div class="icon" aria-hidden="true">☁️</div>
+          <h3>Sync if you want</h3>
+          <p>Put your JobSquirrel folder in iCloud Drive or Google Drive to keep a copy in your own cloud.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>Questions</h2>
+      <details>
+        <summary>Is it really free?</summary>
+        <p>Yes. JobSquirrel is free and open source under the AGPL-3.0 licence. The source code is published with every release.</p>
+      </details>
+      <details>
+        <summary>When can I get it?</summary>
+        <p>The first version is being built now. Follow <a href="https://github.com/jobsquirrel">JobSquirrel on GitHub</a> to hear when it is ready.</p>
+      </details>
+      <details>
+        <summary>Which computers and browsers does it work with?</summary>
+        <p>The first version is for macOS with Google Chrome. Other systems may come later.</p>
+      </details>
+      <details>
+        <summary>Where should I download it from?</summary>
+        <p>Only from the official <a href="https://github.com/jobsquirrel">JobSquirrel GitHub page</a>. Each release lists checksums so you can check your download. Copies from anywhere else are not ours.</p>
+      </details>
+      <details>
+        <summary>Which job sites are supported?</summary>
+        <p>Seek, Trade Me Jobs and LinkedIn. You can also save other job pages; JobSquirrel reads the job details when the page provides them.</p>
+      </details>
+    </div>
+  </section>
 </main>
+
+<footer>
+  <div class="wrap">
+    <span>JobSquirrel · Made in New Zealand</span>
+    <span><a href="https://github.com/jobsquirrel">GitHub</a> · AGPL-3.0</span>
+  </div>
+</footer>
+
+<script>
+  // Click the hero squirrel: an acorn drops. Skipped for people who turned off motion.
+  const hero = document.querySelector(".hero-sq");
+  const drop = hero && hero.querySelector(".drop");
+  if (drop && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    hero.addEventListener("click", () => {
+      drop.classList.remove("falling");
+      void drop.getBBox();
+      drop.classList.add("falling");
+    });
+  }
+</script>
 </body>
 </html>
