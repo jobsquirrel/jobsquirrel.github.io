@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>JobSquirrel</title>
-<meta name="description" content="JobSquirrel saves job ads from Seek, Trade Me Jobs and LinkedIn before they disappear, and keeps track of every application. Free, open source, and your data stays on your computer.">
+<meta name="description" content="JobSquirrel saves job ads from Seek, Trade Me Jobs, LinkedIn, Indeed and other New Zealand job sites before they disappear, and keeps track of every application. Free, open source, and your data stays on your computer.">
 <link rel="icon" href="squirrel.svg" type="image/svg+xml">
 <meta property="og:title" content="JobSquirrel">
 <meta property="og:description" content="Save job ads before they disappear, and keep track of every application. Your data stays on your computer.">
@@ -20,6 +20,7 @@
       <a href="#how">How it works</a>
       <a href="#privacy">Privacy</a>
       <a href="#faq">FAQ</a>
+      <a href="help.html">Help</a>
     </nav>
   </header>
 </div>
@@ -48,7 +49,7 @@
 <ellipse class="ink thin" cx="150" cy="44" rx="7" ry="9"/><path class="ink thin" d="M142 39 C142 31 158 31 158 39 Z"/></g>
 </g></svg>
     <h1>Stash job ads <u>before they disappear.</u></h1>
-    <p>JobSquirrel saves the job ads you care about from Seek, Trade Me Jobs and LinkedIn with one click, and keeps track of every application. Free, open source, and everything stays on your computer.</p>
+    <p>JobSquirrel saves the job ads you care about from Seek, Trade Me Jobs, LinkedIn, Indeed and other New Zealand job sites with one click, and keeps track of every application. Free, open source, and everything stays on your computer.</p>
     <div class="cta">
       <span class="btn primary" aria-disabled="true">Download for macOS — coming soon</span>
       <a class="btn ghost" href="https://github.com/jobsquirrel">Follow on GitHub</a>
@@ -61,27 +62,27 @@
       <h2>A peek inside</h2>
       <p class="lead">Every job you save, with its ad, your notes, the CV you sent and what happens next, in one calm window.</p>
       <figure class="shot shot-main">
-        <img src="screens/job-details.png" width="1280" height="800" loading="lazy"
-             alt="The JobSquirrel window: folders on the left, saved jobs in the middle, and the selected job's details on the right, with an interview reminder, a timeline, the recruiter's contact, the documents sent and notes.">
+        <img src="screens/job-details.png" width="1600" height="1000" loading="lazy"
+             alt="The JobSquirrel window: folders, statuses and tags on the left, saved jobs in the middle, and the selected job's details on the right, with its folder, closing date, follow-up date, tags, the CV sent and notes.">
       </figure>
       <div class="shots">
         <figure class="shot">
-          <img src="screens/board.png" width="1280" height="800" loading="lazy"
+          <img src="screens/board.png" width="1600" height="1000" loading="lazy"
                alt="Board view: jobs as cards in five columns, Interested, Applied, Interview, Offer and Rejected.">
           <figcaption>See every application at a glance.</figcaption>
         </figure>
         <figure class="shot">
-          <img src="screens/first-open.png" width="1280" height="800" loading="lazy"
-               alt="The first time you open JobSquirrel: three steps to save your first job, and the library switcher at the bottom left.">
+          <img src="screens/first-open.png" width="1600" height="1000" loading="lazy"
+               alt="The first time you open JobSquirrel: three steps to save your first job, and where your jobs are kept.">
           <figcaption>Open it and start. No setup.</figcaption>
         </figure>
         <figure class="shot">
-          <img src="screens/extension-popup-crop.png" width="832" height="520" loading="lazy"
-               alt="The Chrome extension: a small popup that saves the job ad you are looking at.">
+          <img src="screens/extension-popup-crop.png" width="720" height="450" loading="lazy"
+               alt="The Chrome extension's popup over a job ad: the job is saved, with its folder, status and tags ready to change.">
           <figcaption>One click saves the job ad you're reading.</figcaption>
         </figure>
       </div>
-      <p class="fine">Design preview. JobSquirrel is still being built, so details may change.</p>
+      <p class="fine">Screenshots of the app with made-up jobs.</p>
     </div>
   </section>
 
@@ -93,7 +94,7 @@
         <div class="card">
           <div class="step">1</div>
           <h3>Spot a job</h3>
-          <p>Browse Seek, Trade Me Jobs or LinkedIn the way you always do.</p>
+          <p>Browse Seek, Trade Me Jobs, LinkedIn, graduate and volunteer sites, or any company’s careers page, the way you always do.</p>
         </div>
         <svg class="arrow" viewBox="0 0 46 30" aria-hidden="true"><path class="ink thin" d="M3 18 C15 8 28 22 40 13 M33 9 L41 13 L35 20" filter="url(#rough)"/></svg>
         <div class="card">
@@ -226,7 +227,7 @@
         <div class="card">
           <div class="icon" aria-hidden="true">🗂️</div>
           <h3>Board and list views</h3>
-          <p>See every application at a glance, sort them into folders, and filter by status or tag.</p>
+          <p>See every application at a glance, sort them into folders, and filter by status, company, tag and more.</p>
         </div>
         <div class="card">
           <div class="icon" aria-hidden="true">📎</div>
@@ -250,12 +251,12 @@
         <div class="card">
           <div class="icon" aria-hidden="true">🏠</div>
           <h3>Plain files on your computer</h3>
-          <p>Your jobs, snapshots and documents live in a folder you choose. You own it.</p>
+          <p>Your jobs, snapshots and documents live in a JobSquirrel folder on your computer. You own it, and you can move it any time.</p>
         </div>
         <div class="card">
           <div class="icon" aria-hidden="true">👀</div>
           <h3>Only what you save</h3>
-          <p>The extension only captures the page you are looking at, and only when you click save.</p>
+          <p>The extension only captures the page you are looking at, and only when you click the squirrel to save it.</p>
         </div>
         <div class="card">
           <div class="icon" aria-hidden="true">☁️</div>
@@ -283,11 +284,22 @@
       </details>
       <details>
         <summary>Where should I download it from?</summary>
-        <p>Only from the official <a href="https://github.com/jobsquirrel">JobSquirrel GitHub page</a>. Each release lists checksums so you can check your download. Copies from anywhere else are not ours.</p>
+        <p>Only from the official <a href="https://github.com/jobsquirrel">JobSquirrel GitHub page</a> (under Releases), or from a link on this website. Each release lists checksums so you can check your download. Copies from anywhere else are not ours, even if they use the JobSquirrel name.</p>
       </details>
       <details>
         <summary>Which job sites are supported?</summary>
-        <p>Seek, Trade Me Jobs and LinkedIn. You can also save other job pages; JobSquirrel reads the job details when the page provides them.</p>
+        <p>JobSquirrel reads the job details on these sites:</p>
+        <ul>
+          <li><b>Job boards:</b> Seek, Trade Me Jobs, LinkedIn, Indeed</li>
+          <li><b>Graduate jobs:</b> SEEK Grad, Prosple, Student Job Search</li>
+          <li><b>Volunteering:</b> SEEK Volunteer and regional volunteer centres</li>
+          <li><b>Sector and employer sites:</b> Education Gazette, Hays, and many employers’ own careers pages</li>
+        </ul>
+        <p>You can save any other job page too. JobSquirrel always keeps a full copy of the page, and fills in whatever details the page provides; you can pick or type the rest. More sites come in later versions. See <a href="help.html#sites">Supported sites</a>.</p>
+      </details>
+      <details>
+        <summary>The extension says “Open JobSquirrel to save”</summary>
+        <p>The extension saves jobs into the JobSquirrel app on your Mac, so the app must be running. Open JobSquirrel, then click <b>Try Again</b> in the popup. For more help, see <a href="help.html#trouble">Something wrong?</a></p>
       </details>
     </div>
   </section>
