@@ -46,6 +46,20 @@ nav a:hover { color: var(--accent); }
 .btn.primary { background: #d07a32; color: #fff; }
 .btn.ghost { background: var(--card); color: var(--fg); }
 .btn[aria-disabled="true"] { cursor: default; }
+.hero p.small { margin-top: 16px; font-size: .95rem; }
+.hero .shot-main { margin: 40px 0 0; }
+.cta.left { justify-content: flex-start; }
+.swaps { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 24px; }
+.swaps .card { padding: 18px 24px 20px; }
+.swaps s { text-decoration-color: #d07a32; text-decoration-thickness: 2px; }
+.swaps b { font-family: var(--hand); font-weight: 400; font-size: 1.6rem; line-height: 1.2; color: var(--fg); }
+.swaps .card p + p { margin-top: 6px; }
+@media (max-width: 600px) { .swaps { grid-template-columns: 1fr; } }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chips span { background: var(--card); border: 1.5px solid var(--line); border-radius: 99px; padding: 4px 14px; }
+.contact { padding-top: 16px; padding-bottom: 48px; }
+.contact h1 { font-size: clamp(2.2rem, 6vw, 3rem); margin: 0; }
+.contact .btn { max-width: 100%; overflow-wrap: anywhere; }
 .hero .note { margin-top: 22px; font-family: var(--hand); font-size: 1.2rem; color: var(--accent); }
 
 section { padding: 48px 0; border-top: 1px dashed var(--line); }

@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JobSquirrel</title>
-<meta name="description" content="JobSquirrel saves job ads from Seek, Trade Me Jobs, LinkedIn, Indeed and other New Zealand job sites before they disappear, and keeps track of every application. Free to try, and your data stays on your computer.">
+<title>JobSquirrel: your all-in-one job hunting dashboard</title>
+<meta name="description" content="Your personal all-in-one job hunting dashboard. Save any job ad with one click, and see every application, deadline, interview and CV on one screen. Free, for Mac and Windows.">
 <link rel="icon" href="squirrel.svg" type="image/svg+xml">
-<meta property="og:title" content="JobSquirrel">
-<meta property="og:description" content="Save job ads before they disappear, and keep track of every application. Your data stays on your computer.">
+<meta property="og:title" content="JobSquirrel: your all-in-one job hunting dashboard">
+<meta property="og:description" content="Save any job ad with one click. See every application, deadline, interview and CV on one screen.">
 <meta property="og:url" content="https://jobsquirrel.nz/">
+<meta property="og:image" content="https://jobsquirrel.nz/screens/board.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,9 +19,9 @@
     <a class="brand" href="/"><img src="squirrel.svg" alt="" width="40" height="33"> JobSquirrel</a>
     <nav aria-label="Main">
       <a href="#how">How it works</a>
-      <a href="#privacy">Privacy</a>
       <a href="#faq">FAQ</a>
       <a href="help.html">Help</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 </div>
@@ -48,74 +49,59 @@
 <g class="drop"><ellipse class="nut" cx="150" cy="44" rx="7" ry="9"/><path class="cap" d="M142 39 C142 31 158 31 158 39 Z"/>
 <ellipse class="ink thin" cx="150" cy="44" rx="7" ry="9"/><path class="ink thin" d="M142 39 C142 31 158 31 158 39 Z"/></g>
 </g></svg>
-    <h1>Stash job ads <u>before they disappear.</u></h1>
-    <p>JobSquirrel saves the job ads you care about from Seek, Trade Me Jobs, LinkedIn, Indeed and other New Zealand job sites with one click, and keeps track of every application. Free to try, and everything stays on your computer.</p>
+    <h1>Your personal all-in-one <u>job hunting dashboard.</u></h1>
+    <p>Save any job ad with one click. Then see every application, deadline, interview and CV on one screen.</p>
     <div class="cta">
-      <span class="btn primary" aria-disabled="true">Download for macOS — coming soon</span>
-      <a class="btn ghost" href="https://github.com/jobsquirrel">Follow on GitHub</a>
+      <a class="btn primary" href="https://github.com/foxnz/landfern/releases/latest">Download</a>
+      <a class="btn ghost" href="https://github.com/foxnz/landfern">Star on GitHub</a>
     </div>
-    <p class="note">New Zealand has no wild squirrels. Now it has one.</p>
+    <p class="small">Free · No account · Mac and Windows</p>
+    <figure class="shot shot-main">
+      <img src="screens/board.png" width="1600" height="1000"
+           alt="The JobSquirrel board: jobs as cards in columns from Interested to Offer, with the selected job's salary, closing date, follow-up, tags and CV at the right.">
+    </figure>
   </div>
 
-  <section id="peek">
+  <section id="why">
     <div class="wrap">
-      <h2>A peek inside</h2>
-      <p class="lead">Every job you save, with its ad, your notes, the CV you sent and what happens next, in one calm window.</p>
-      <figure class="shot shot-main">
-        <img src="screens/job-details.png" width="1600" height="1000" loading="lazy"
-             alt="The JobSquirrel window: folders, statuses and tags on the left, saved jobs in the middle, and the selected job's details on the right, with its folder, closing date, follow-up date, tags, the CV sent and notes.">
-      </figure>
-      <div class="shots">
-        <figure class="shot">
-          <img src="screens/board.png" width="1600" height="1000" loading="lazy"
-               alt="Board view: jobs as cards in five columns, Interested, Applied, Interview, Offer and Rejected.">
-          <figcaption>See every application at a glance.</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="screens/first-open.png" width="1600" height="1000" loading="lazy"
-               alt="The first time you open JobSquirrel: three steps to save your first job, and where your jobs are kept.">
-          <figcaption>Open it and start. No setup.</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="screens/extension-popup-crop.png" width="720" height="450" loading="lazy"
-               alt="The Chrome extension's popup over a job ad: the job is saved, with its folder, status and tags ready to change.">
-          <figcaption>One click saves the job ad you're reading.</figcaption>
-        </figure>
+      <h2>Sound familiar?</h2>
+      <div class="swaps">
+        <div class="card"><p><s>The ad is gone before your interview.</s></p><p><b>You keep your own copy of it.</b></p></div>
+        <div class="card"><p><s>“Which CV did I send them?”</s></p><p><b>It’s right there, with the job.</b></p></div>
+        <div class="card"><p><s>You missed the closing date.</s></p><p><b>You get a reminder first.</b></p></div>
+        <div class="card"><p><s>A spreadsheet you stopped updating.</s></p><p><b>A board. Drag a card, done.</b></p></div>
       </div>
-      <p class="fine">Screenshots of the app with made-up jobs.</p>
     </div>
   </section>
 
   <section id="how">
     <div class="wrap">
-      <h2>How it works</h2>
-      <p class="lead">A desktop app and a small Chrome extension work together. No account, no sign-up.</p>
+      <h2>See a job. Click. Done.</h2>
+      <figure class="shot shot-main">
+        <img src="screens/save-job.gif" width="1600" height="1000" loading="lazy"
+             alt="On a job ad in Chrome, a click on the squirrel saves the job, and Show in App opens it in JobSquirrel.">
+      </figure>
       <div class="steps">
-        <div class="card">
-          <div class="step">1</div>
-          <h3>Spot a job</h3>
-          <p>Browse Seek, Trade Me Jobs, LinkedIn, graduate and volunteer sites, or any company’s careers page, the way you always do.</p>
-        </div>
+        <div class="card"><div class="step">1</div><h3>Spot a job</h3><p>On any job site, the way you always do.</p></div>
         <svg class="arrow" viewBox="0 0 46 30" aria-hidden="true"><path class="ink thin" d="M3 18 C15 8 28 22 40 13 M33 9 L41 13 L35 20" filter="url(#rough)"/></svg>
-        <div class="card">
-          <div class="step">2</div>
-          <h3>Squirrel it away</h3>
-          <p>One click saves the job details and a full copy of the page into the JobSquirrel app.</p>
-        </div>
+        <div class="card"><div class="step">2</div><h3>Click the squirrel</h3><p>What the ad says (title, company, pay, closing date) and a full copy of it are saved.</p></div>
         <svg class="arrow" viewBox="0 0 46 30" aria-hidden="true"><path class="ink thin" d="M3 18 C15 8 28 22 40 13 M33 9 L41 13 L35 20" filter="url(#rough)"/></svg>
-        <div class="card">
-          <div class="step">3</div>
-          <h3>Track every application</h3>
-          <p>Add notes, tags and the CV you sent, and move each job along as things happen.</p>
-        </div>
+        <div class="card"><div class="step">3</div><h3>Follow it to the offer</h3><p>Notes, interviews, CVs, tags and reminders, all with the job.</p></div>
       </div>
+    </div>
+  </section>
+
+  <section id="sites">
+    <div class="wrap">
+      <h2>Works where you look</h2>
+      <p class="chips"><span>Seek</span> <span>LinkedIn</span> <span>Indeed</span> <span>Trade Me Jobs</span> <span>SEEK Grad</span> <span>Prosple</span> <span>Student Job Search</span> <span>SEEK Volunteer</span> <span>Hays</span> <span>Education Gazette</span></p>
+      <p class="lead">Any other job page works too: you get the full copy, and fill in what it doesn’t say.</p>
     </div>
   </section>
 
   <section id="journey">
     <div class="wrap">
       <h2>From “ooh” to “I got it!”</h2>
-      <p class="lead">Every job moves through the same five steps. The squirrel has felt all of them.</p>
       <div class="statuses">
         <div class="card status"><svg viewBox="10 10 190 175" class="sq " role="img" aria-label="Squirrel looking at a job ad"><g filter="url(#rough)">
 <g class="tailg"><path class="tail" transform="translate(2.5 2)" d="M118 166 C176 166 194 110 178 74 C164 42 124 28 110 52 C102 67 117 78 132 72 C152 66 158 100 148 126 C140 146 126 152 112 151 Z"/><path class="ink" d="M118 166 C176 166 194 110 178 74 C164 42 124 28 110 52 C102 67 117 78 132 72 C152 66 158 100 148 126 C140 146 126 152 112 151"/>
@@ -214,55 +200,20 @@
     </div>
   </section>
 
-  <section id="features">
+  <section id="privacy">
     <div class="wrap">
-      <h2>Why a squirrel?</h2>
-      <p class="lead">Job ads vanish when they close, often just before your interview. JobSquirrel keeps your own copy.</p>
-      <div class="grid">
-        <div class="card">
-          <div class="icon" aria-hidden="true">📸</div>
-          <h3>A copy that stays</h3>
-          <p>Every saved job keeps a full snapshot of the ad, so you can reread it after the listing is gone.</p>
-        </div>
-        <div class="card">
-          <div class="icon" aria-hidden="true">🗂️</div>
-          <h3>Board and list views</h3>
-          <p>See every application at a glance, sort them into folders, and filter by status, company, tag and more.</p>
-        </div>
-        <div class="card">
-          <div class="icon" aria-hidden="true">📎</div>
-          <h3>Your documents, in one place</h3>
-          <p>Keep the CV and cover letter you sent next to the job you sent them for.</p>
-        </div>
-        <div class="card">
-          <div class="icon" aria-hidden="true">💾</div>
-          <h3>Back up any time</h3>
-          <p>Export your whole library to a single file whenever you like.</p>
-        </div>
-      </div>
+      <h2>Yours, and only yours</h2>
+      <p class="lead">Your jobs are plain files in a folder on your computer. No account, no tracking. The extension reads a job ad only when you click it, and JobSquirrel sends nothing unless you turn on a feature that needs to.</p>
     </div>
   </section>
 
-  <section id="privacy">
+  <section id="try">
     <div class="wrap">
-      <h2>Your data stays with you</h2>
-      <p class="lead">JobSquirrel has no server. It does not send anything off your computer: no analytics, no crash reports, no tracking.</p>
-      <div class="grid">
-        <div class="card">
-          <div class="icon" aria-hidden="true">🏠</div>
-          <h3>Plain files on your computer</h3>
-          <p>Your jobs, snapshots and documents live in a JobSquirrel folder on your computer. You own it, and you can move it any time.</p>
-        </div>
-        <div class="card">
-          <div class="icon" aria-hidden="true">👀</div>
-          <h3>Only what you save</h3>
-          <p>The extension only captures the page you are looking at, and only when you click the squirrel to save it.</p>
-        </div>
-        <div class="card">
-          <div class="icon" aria-hidden="true">☁️</div>
-          <h3>Sync if you want</h3>
-          <p>Put your JobSquirrel folder in iCloud Drive or Google Drive to keep a copy in your own cloud.</p>
-        </div>
+      <h2>It’s in beta. Help shape it.</h2>
+      <p class="lead">Something broken, confusing or missing? Tell us, and a person reads it.</p>
+      <div class="cta left">
+        <a class="btn primary" href="https://github.com/foxnz/landfern/releases/latest">Download</a>
+        <a class="btn ghost" href="contact.html">Send feedback</a>
       </div>
     </div>
   </section>
@@ -271,35 +222,16 @@
     <div class="wrap">
       <h2>Questions</h2>
       <details>
-        <summary>Is it really free?</summary>
-        <p>Yes, trying JobSquirrel is free. Each download comes with short trial terms. The licence for later versions is not decided yet.</p>
+        <summary>What do I need?</summary>
+        <p>A Mac with macOS 14 or later, or a 64-bit PC with Windows 10 or 11, and Google Chrome.</p>
       </details>
       <details>
-        <summary>When can I get it?</summary>
-        <p>The first version is being built now. It will be on the <a href="https://github.com/foxnz/landfern/releases">download page</a> when it is ready.</p>
+        <summary>Windows warns me about the download</summary>
+        <p>The Windows version is not signed yet. Click <b>More info</b>, then <b>Run anyway</b>. If there is no <b>Run anyway</b>, it can’t be installed on that PC yet. Download it only from this website or our <a href="https://github.com/foxnz/landfern/releases/latest">download page</a>.</p>
       </details>
       <details>
-        <summary>Which computers and browsers does it work with?</summary>
-        <p>The first version is for macOS with Google Chrome. Other systems may come later.</p>
-      </details>
-      <details>
-        <summary>Where should I download it from?</summary>
-        <p>Only from the official <a href="https://github.com/foxnz/landfern/releases">download page</a>, or from a link on this website. Each release lists checksums so you can check your download. Copies from anywhere else are not ours, even if they use the JobSquirrel name.</p>
-      </details>
-      <details>
-        <summary>Which job sites are supported?</summary>
-        <p>JobSquirrel reads the job details on these sites:</p>
-        <ul>
-          <li><b>Job boards:</b> Seek, Trade Me Jobs, LinkedIn, Indeed</li>
-          <li><b>Graduate jobs:</b> SEEK Grad, Prosple, Student Job Search</li>
-          <li><b>Volunteering:</b> SEEK Volunteer and regional volunteer centres</li>
-          <li><b>Sector and employer sites:</b> Education Gazette, Hays, and many employers’ own careers pages</li>
-        </ul>
-        <p>You can save any other job page too. JobSquirrel always keeps a full copy of the page, and fills in whatever details the page provides; you can pick or type the rest. More sites come in later versions. See <a href="help.html#sites">Supported sites</a>.</p>
-      </details>
-      <details>
-        <summary>The extension says “Open JobSquirrel to save”</summary>
-        <p>The extension saves jobs into the JobSquirrel app on your Mac, so the app must be running. Open JobSquirrel, then click <b>Try Again</b> in the popup. For more help, see <a href="help.html#trouble">Something wrong?</a></p>
+        <summary>The extension says JobSquirrel isn’t running</summary>
+        <p>Open the JobSquirrel app, then click <b>Try Again</b>. More in <a href="help.html#trouble">Something wrong?</a></p>
       </details>
     </div>
   </section>
@@ -307,8 +239,8 @@
 
 <footer>
   <div class="wrap">
-    <span>JobSquirrel · Made in New Zealand</span>
-    <span><a href="https://github.com/jobsquirrel">GitHub</a></span>
+    <span>JobSquirrel · Made in New Zealand, which has no wild squirrels. Now it has one.</span>
+    <span><a href="contact.html">Contact</a> · <a href="https://github.com/foxnz/landfern">GitHub</a></span>
   </div>
 </footer>
 

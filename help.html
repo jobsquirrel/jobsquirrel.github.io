@@ -45,9 +45,9 @@
     <a class="brand" href="index.html"><img src="squirrel.svg" alt="" width="40" height="33"> JobSquirrel</a>
     <nav aria-label="Main">
       <a href="index.html#how">How it works</a>
-      <a href="index.html#privacy">Privacy</a>
       <a href="index.html#faq">FAQ</a>
       <a href="help.html" aria-current="page">Help</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
@@ -68,27 +68,34 @@
 
     <main class="doc">
       <h1>How to use JobSquirrel</h1>
-      <p class="lead">JobSquirrel has two parts: an app on your Mac that keeps your jobs, and a Chrome extension that saves job ads into it. This page shows you how to set up both and use them day to day.</p>
+      <p class="lead">JobSquirrel has two parts: an app on your computer that keeps your jobs, and a Chrome extension that saves job ads into it. This page shows you how to set up both and use them day to day.</p>
 
       <section id="install">
         <h2>Install</h2>
         <h3>1. The app</h3>
         <ol class="do">
-          <li>Download the newest <b>JobSquirrel</b> for Mac from the <a href="https://github.com/foxnz/landfern/releases/latest">download page</a>.</li>
-          <li>Open the download and drag JobSquirrel into your <b>Applications</b> folder.</li>
-          <li>The first time, macOS may say it can't check the developer. Click <b>Done</b>, open <b>System Settings → Privacy &amp; Security</b>, scroll down and click <b>Open Anyway</b> next to JobSquirrel, then confirm. You only do this once.</li>
-          <li>JobSquirrel opens with a library called <b>JobSquirrel</b> in your home folder. That is where your jobs are kept. You can start using it straight away.</li>
+          <li>Download the newest <b>JobSquirrel</b> for Mac (macOS 14 or later) or Windows (10 or 11, 64-bit) from the <a href="https://github.com/foxnz/landfern/releases/latest">download page</a>.</li>
+          <li>Mac: open the download and drag JobSquirrel into your <b>Applications</b> folder. Windows: open the download; if Windows warns you, click <b>More info</b>, then <b>Run anyway</b>.</li>
+          <li>JobSquirrel opens with a library called <b>Saved-Jobs</b> in your home folder. That is where your jobs are kept. You can start using it straight away.</li>
         </ol>
-        <div class="tip"><b>Why the warning?</b> A release that isn't signed with JobSquirrel's Apple Developer ID shows this warning; signed releases open without it. Only download JobSquirrel from the official download page or a link on this website, and check the checksum listed with each release if you like.</div>
+        <div class="tip">Only download JobSquirrel from the official download page or a link on this website, and check the checksum listed with each release if you like.</div>
 
         <h3>2. The Chrome extension</h3>
         <ol class="do">
-          <li>In JobSquirrel, choose <b>Help → Get the Extension…</b> and <b>Show Extension Folder</b>. JobSquirrel keeps this folder up to date.</li>
-          <li>In Chrome, go to <kbd>chrome://extensions</kbd> and turn on <b>Developer mode</b> (top right).</li>
-          <li>Click <b>Load unpacked</b> and choose that folder.</li>
+          <li>In JobSquirrel, click <b>Show Folder</b> on the first screen, or choose <b>Help → Get the Extension…</b>. JobSquirrel keeps this folder up to date.</li>
+          <li>Click <b>Open Extensions</b>, or go to <kbd>chrome://extensions</kbd> in Chrome, and turn on <b>Developer mode</b> (top right). Leave it on: Chrome turns the extension off without it. On Windows the button copies the address: press <kbd>Ctrl</kbd> <kbd>V</kbd> in Chrome.</li>
+          <li>Drag the folder onto that page, or click <b>Load unpacked</b> and choose it.</li>
           <li>Click the puzzle piece in Chrome's toolbar and pin <b>JobSquirrel</b>, so the squirrel is always one click away.</li>
         </ol>
         <div class="tip">Keep the unzipped folder where it is. Chrome loads the extension from it, so deleting the folder removes the extension.</div>
+
+        <h3 id="uninstall">Uninstall</h3>
+        <p>Your jobs stay in your library folder until you delete it yourself.</p>
+        <ol class="do">
+          <li>In JobSquirrel's Settings, turn off opening at login. Then quit JobSquirrel and drag it from <b>Applications</b> to the Trash. On Windows, uninstall it in <b>Settings → Apps</b>.</li>
+          <li>In Chrome, go to <kbd>chrome://extensions</kbd> and remove the extension.</li>
+          <li>On a Mac, to remove its settings too, delete <b>Saved-Jobs-Extension</b> in your home folder, and <b>Application Support/JobSquirrel</b> and <b>Logs/JobSquirrel</b> in your Library folder.</li>
+        </ol>
       </section>
 
       <section id="save">
@@ -199,8 +206,7 @@
         </details>
         <details>
           <summary>Still stuck?</summary>
-          <p>Tell us on the <a href="https://github.com/jobsquirrel">JobSquirrel GitHub page</a>. Please say what you clicked and what you saw; a screenshot helps. In the app, <b>Help → Open Log</b> shows what JobSquirrel recorded. The log can name files in your library, so read it before you share it.</p>
-          <!-- TODO: add hello@jobsquirrel.nz and the booking link once forwarding and booking are set up. -->
+          <p><a href="contact.html">Tell us</a>: in the app, <b>Help → Send Feedback…</b> opens the same page.</p>
         </details>
       </section>
 
@@ -228,7 +234,7 @@
 <footer>
   <div class="wrap">
     <span>JobSquirrel · Made in New Zealand</span>
-    <span><a href="https://github.com/jobsquirrel">GitHub</a></span>
+    <span><a href="contact.html">Contact</a> · <a href="https://github.com/foxnz/landfern">GitHub</a></span>
   </div>
 </footer>
 
