@@ -131,3 +131,5 @@ svg .qmark { fill: var(--ink); }
 .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
 .shot figcaption { margin-top: 10px; color: var(--muted); font-size: .95rem; text-align: center; }
 .fine { margin-top: 20px; color: var(--muted); font-size: .9rem; text-align: center; }
+
+.doc .shot { display: block; width: 100%; height: auto; margin: 18px 0 22px; border-radius: 12px; box-shadow: 0 10px 30px rgba(60, 35, 10, 0.14); }

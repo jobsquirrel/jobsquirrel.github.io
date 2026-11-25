@@ -135,13 +135,14 @@
         <h2>Find your jobs</h2>
         <p>The window has three parts: the sidebar on the left, your jobs in the middle, and the details of the selected job on the right.</p>
         <h3>Sidebar</h3>
-        <p><b>All Jobs</b> shows everything. <b>Unfiled</b> shows jobs not in a folder. Below them are your folders, the statuses, your tags, your saved filters and the Trash. Click any of them to see just those jobs. Under <b>Documents</b>, <b>CVs</b> and <b>Cover letters</b> list every file you added and the jobs you used it for.</p>
+        <p><b>All Jobs</b> shows everything. <b>Unfiled</b> shows jobs not in a folder. Below them are your folders, your tags, your saved filters and the Trash. Click any of them to see just those jobs. Under <b>Documents</b>, <b>CVs</b> and <b>Cover letters</b> list every file you added and the jobs you used it for.</p>
         <h3>Filters</h3>
         <p>Above the list, click <b>Status</b>, <b>Company</b>, <b>Location</b>, <b>Folder</b>, <b>Tag</b> or <b>Source</b> and tick what you want to see. Each choice shows how many jobs match. Ticking two options in one filter shows jobs with either; using two filters shows jobs that match both. Click <b>Clear</b> to see all jobs again. Click a company or place in a job's details to see all jobs there.</p>
         <p>When you use a set of filters often, click <b>Save Filter…</b> and give it a name. It appears in the sidebar.</p>
-        <h3>List and Board</h3>
-        <p><b>List</b> shows your jobs one under another, newest first; use <b>Sort</b> to change the order. <b>Board</b> shows a column for each status, so you can see where every application stands. Click a column's heading to fold it into a thin strip, and click the strip to open it again; <b>Rejected</b> starts folded. JobSquirrel remembers which one you used last.</p>
-        <p>The two buttons at the top corners of the window show or hide the sidebar and the details. On the Board the details start hidden so every column fits; click a card to see its details.</p>
+        <img class="shot" src="screens/search-filter.gif" width="1000" height="625" loading="lazy" alt="Typing “developer” in Search jobs, then choosing Applied in the Status filter, leaves the two matching jobs.">
+        <h3>Board, Table and List</h3>
+        <p><b>Board</b> shows a column for each status, so you can see where every application stands. Click the arrow in a column's heading to fold it into a thin strip, and click the strip to open it again; <b>Rejected</b> starts folded. <b>Table</b> shows every detail as a spreadsheet; click a column's heading to sort by it. <b>List</b> shows your jobs one under another. <b>Sort</b> changes the order. JobSquirrel remembers which one you used last.</p>
+        <p>The two buttons at the top corners of the window show or hide the sidebar and the details.</p>
         <h3>Search</h3>
         <p>Type in <b>Search jobs</b> to find jobs by title, company, place, tag or folder.</p>
       </section>
@@ -157,11 +158,12 @@
           <li><i style="background:#b3b3b3"></i><b>Rejected</b>: it didn't work out this time.</li>
         </ul>
         <p>Change it with the status menu at the top right of the details, in the popup, or by dragging the card to another column on the Board. When you move a job to <b>Applied</b>, JobSquirrel fills in today as the applied date if it has none.</p>
+        <img class="shot" src="screens/organise.gif" width="1000" height="625" loading="lazy" alt="Dragging a card from the Applied column to the Interview column changes the job's status.">
         <h3>Add more to a job</h3>
-        <p>Under a job's details, the <b>Add</b> row lets you add an applied date, a follow-up date, notes, tags, the CV and cover letter you sent, or a field of your own with <b>+ Custom field…</b>. Fields you haven't filled in stay hidden, so each job only shows what matters. To fix the title, company, location, work type or salary, click <b>Edit details</b>.</p>
+        <p>Click any detail, such as the title, company or salary, to change it. Add the CV and cover letter you sent with <b>+ Add CV</b> and <b>+ Add Cover Letter</b>. The <b>Add</b> row at the bottom adds an applied date, a follow-up, notes, tags or a field of your own with <b>+ Custom field…</b>.</p>
         <h3>Reminders</h3>
-        <p>Give a job a follow-up date and JobSquirrel reminds you at 9 am that day. For a job still marked Interested that has a closing date, it also reminds you 3 days before it closes and on the closing day. <b>Window → Reminders</b> lists the reminders of the past week; click one to open its job.</p>
-        <p>Reminders come while JobSquirrel is running, even with its window closed. Reminders you missed show the next time you open it. To have it running every day, turn on <b>Open JobSquirrel when I log in</b> in <b>JobSquirrel → Settings…</b>.</p>
+        <p>Give a job a follow-up date and JobSquirrel reminds you at 9 am that day, or at the time you choose. For a job still marked Interested that has a closing date, it also reminds you 3 days before it closes and on the closing day. The bell at the top right lists the reminders of the past week; click one to open its job.</p>
+        <p>Reminders come while JobSquirrel is running, even with its window closed. Reminders you missed show the next time you open it. To have it running every day, turn on <b>Open JobSquirrel when I log in</b> (on Windows, <b>when I sign in</b>) in Settings.</p>
         <h3>The saved page</h3>
         <p>The <b>Saved Page</b> tab shows the copy of the ad as it was when you saved it. <b>Open Original</b> opens the live ad in your browser, if it is still there.</p>
       </section>
@@ -213,8 +215,9 @@
       <section id="keys">
         <h2>Keyboard shortcuts</h2>
         <table class="keys">
-          <tr><td><kbd>⌘</kbd> <kbd>1</kbd></td><td>Show as List</td></tr>
-          <tr><td><kbd>⌘</kbd> <kbd>2</kbd></td><td>Show as Board</td></tr>
+          <tr><td><kbd>⌘</kbd> <kbd>1</kbd></td><td>Show as Board</td></tr>
+          <tr><td><kbd>⌘</kbd> <kbd>2</kbd></td><td>Show as Table</td></tr>
+          <tr><td><kbd>⌘</kbd> <kbd>3</kbd></td><td>Show as List</td></tr>
           <tr><td><kbd>⌘</kbd> <kbd>F</kbd></td><td>Search jobs</td></tr>
           <tr><td><kbd>⌘</kbd> <kbd>N</kbd></td><td>New folder</td></tr>
           <tr><td><kbd>⌃</kbd> <kbd>⌘</kbd> <kbd>S</kbd></td><td>Show or hide the sidebar</td></tr>
