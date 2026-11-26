@@ -59,6 +59,7 @@
         <li><a href="#save">Save a job</a></li>
         <li><a href="#find">Find your jobs</a></li>
         <li><a href="#track">Keep track</a></li>
+        <li><a href="#chat">Chat with your AI</a></li>
         <li><a href="#folders">Folders and libraries</a></li>
         <li><a href="#data">Your data</a></li>
         <li><a href="#trouble">Something wrong?</a></li>
@@ -89,11 +90,15 @@
         <p><b>Removed it by accident?</b> In JobSquirrel, choose <b>Help → Get the Extension…</b>, or <b>Add to Chrome…</b> in Settings. Then download it and drag it in again. Your saved jobs are not affected.</p>
         <p><b>A new version?</b> Download the extension again and drag it onto the same page. If you added it from a <b>Saved-Jobs-Extension</b> folder before, it updates itself; keep that folder.</p>
 
+        <h3 id="updates">New versions of the app</h3>
+        <p>Turn on the update check in <b>Settings</b>, or choose <b>Check for Updates…</b> (on a Mac in the JobSquirrel menu, on Windows in <b>Help</b>). When there is a new version, a card in the corner of the window offers it. Click <b>Update</b>: JobSquirrel downloads it from GitHub, checks that it is ours, installs it and starts again. Nothing is downloaded before you click, and your jobs are not touched.</p>
+
         <h3 id="uninstall">Uninstall</h3>
         <p>Your jobs stay in your library folder until you delete it yourself.</p>
         <ol class="do">
           <li>In JobSquirrel's Settings, turn off opening at login. Then quit JobSquirrel and drag it from <b>Applications</b> to the Trash. On Windows, uninstall it in <b>Settings → Apps</b>.</li>
           <li>In Chrome, go to <kbd>chrome://extensions</kbd> and remove the extension.</li>
+          <li>If you chatted with an AI, the copies made for it are in <b>Saved-Jobs-Chats</b> in your home folder; delete it if you no longer want them.</li>
           <li>On a Mac, to remove its settings too, delete <b>Saved-Jobs-Extension</b> in your home folder, and <b>Application Support/JobSquirrel</b> and <b>Logs/JobSquirrel</b> in your Library folder.</li>
         </ol>
       </section>
@@ -168,6 +173,19 @@
         <p>The <b>Saved Page</b> tab shows the copy of the ad as it was when you saved it. <b>Open Original</b> opens the live ad in your browser, if it is still there.</p>
       </section>
 
+      <section id="chat">
+        <h2>Chat about a job with your own AI</h2>
+        <p>Ask the AI you already use to help with an application: a cover letter, interview questions, or what the employer is really after. JobSquirrel works with <b>Claude Code</b> (with a Claude Pro or Max plan) and <b>Codex</b> (with a ChatGPT plan). You use your own account; JobSquirrel sells no AI.</p>
+        <ol class="do">
+          <li>Right-click a job and choose <b>Chat About This Job</b>, or select a job and click the <b>Agent</b> button at the top right.</li>
+          <li>The Agent page lists each AI and says whether you are signed in. Click <b>Open Chat</b>, <b>Continue</b> to go on with your last chat about this job, or <b>Sign In</b>. If an AI is not on your computer, <b>How to Install</b> opens its maker's instructions.</li>
+          <li>The first time, JobSquirrel tells you what the AI will get and asks you. The chat then opens in a terminal inside the app.</li>
+        </ol>
+        <p>The AI works in a folder with copies of this job: the ad, your notes, and the CV and cover letter linked to it. To give a CV or cover letter to every chat, tick <b>In every chat</b> beside it in <b>CVs</b> or <b>Cover letters</b> in the sidebar. Other jobs are left out.</p>
+        <p>Files the AI makes are under the folder button above the chat; a dot means there is a new one. Open a file, or choose <b>Use as This Job’s CV</b> or <b>Use as This Job’s Cover Letter</b>. Each chat is a tab: double-click its name to rename it, or right-click it and choose <b>Choose Model…</b>.</p>
+        <div class="tip">JobSquirrel itself sends nothing. What you ask goes to Anthropic (Claude Code) or OpenAI (Codex) under your own account, as when you use them anywhere else.</div>
+      </section>
+
       <section id="folders">
         <h2>Folders and libraries</h2>
         <h3>Folders</h3>
@@ -180,7 +198,7 @@
 
       <section id="data">
         <h2>Your data</h2>
-        <p>Everything stays on your Mac, in your library folder: your jobs, the saved pages and your files. JobSquirrel sends nothing anywhere: no account, no tracking, no cloud.</p>
+        <p>Everything stays on your computer, in your library folder: your jobs, the saved pages and your files. No account, no tracking, no cloud. JobSquirrel only goes online when you allow it: to check for a new version, or when you chat with your own AI.</p>
         <h3>Back up</h3>
         <p>Choose <b>File → Export Backup…</b> to save your whole library as one zip file. Keep it somewhere safe, such as an external drive. Your Mac's Time Machine backs up the library folder too.</p>
         <p>When a new version of JobSquirrel changes how your library is stored, it backs up the library first and tells you. Click <b>Show Backup</b> to see the copy.</p>
