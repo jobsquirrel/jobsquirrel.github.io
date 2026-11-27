@@ -70,13 +70,14 @@
     <main class="doc">
       <h1>How to use JobSquirrel</h1>
       <p class="lead">JobSquirrel has two parts: an app on your computer that keeps your jobs, and a Chrome extension that saves job ads into it. This page shows you how to set up both and use them day to day.</p>
+      <p>On Windows and Linux, the menus are behind <b>☰</b> at the top left of the window. <kbd>Alt</kbd> or <kbd>F10</kbd> opens them too.</p>
 
       <section id="install">
         <h2>Install</h2>
         <h3>1. The app</h3>
         <ol class="do">
-          <li>Download JobSquirrel: <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel.dmg"><b>for Mac</b></a> (macOS 14 or later), <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-Setup.exe"><b>for Windows</b></a> (10 or 11, 64-bit), or for Linux (64-bit): the <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-amd64.deb"><b>.deb</b></a> for Ubuntu, Debian and Linux Mint, or the <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-x86_64.AppImage"><b>AppImage</b></a> for other distributions.</li>
-          <li>Mac: open the download and drag JobSquirrel into your <b>Applications</b> folder. Windows: open the download; if Windows warns you, click <b>More info</b>, then <b>Run anyway</b>. Linux: open the .deb to install it; or make the AppImage executable (<b>Properties</b> → <b>Allow executing as program</b>) and open it. On Ubuntu 24.04 and later, use the .deb: JobSquirrel only runs with the security sandbox, which Ubuntu does not give AppImages. Use Chrome from <a href="https://www.google.com/chrome/">google.com/chrome</a>: a Chrome or Chromium installed as a Snap or Flatpak cannot reach the app.</li>
+          <li>Download JobSquirrel: <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel.dmg"><b>for Mac</b></a> (macOS 14 or later), <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-Setup.exe"><b>for Windows</b></a> (10 or 11, 64-bit), or for Linux (64-bit Intel or AMD): the <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-amd64.deb"><b>.deb</b></a> for Ubuntu, Debian and Linux Mint, or the <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-x86_64.AppImage"><b>AppImage</b></a> for other distributions.</li>
+          <li>Mac: open the download and drag JobSquirrel into your <b>Applications</b> folder. Windows: open the download; if Windows warns you, click <b>More info</b>, then <b>Run anyway</b>. Linux: open the .deb to install it, or run <kbd>sudo apt install ./JobSquirrel-amd64.deb</kbd> in the folder you downloaded it to. On other distributions, make the AppImage executable (<b>Properties</b> → <b>Allow executing as program</b>) and open it. On Ubuntu 24.04 and later, use the .deb: it sets up the security sandbox JobSquirrel needs, which Ubuntu does not give AppImages. If you open the AppImage there, JobSquirrel tells you and offers the .deb. Use Chrome from <a href="https://www.google.com/chrome/">google.com/chrome</a>: a Chrome or Chromium installed as a Snap or Flatpak cannot reach the app. Ubuntu’s own Chromium is a Snap.</li>
           <li>JobSquirrel opens with a library called <b>Saved-Jobs</b> in your home folder. That is where your jobs are kept. You can start using it straight away.</li>
         </ol>
         <div class="tip">Only download JobSquirrel from the official download page or a link on this website, and check the checksum listed with each release if you like.</div>
@@ -91,7 +92,7 @@
         <p><b>A new version?</b> Download the extension again and drag it onto the same page. If you added it from a <b>Saved-Jobs-Extension</b> folder before, it updates itself; keep that folder.</p>
 
         <h3 id="updates">New versions of the app</h3>
-        <p>Turn on the update check in <b>Settings</b>, or choose <b>Check for Updates…</b> (on a Mac in the JobSquirrel menu, on Windows and Linux in <b>Help</b>). When there is a new version, a card in the corner of the window offers it. Click <b>Update</b>: JobSquirrel downloads it from GitHub, checks that it is ours, installs it and starts again. Nothing is downloaded before you click, and your jobs are not touched.</p>
+        <p>Turn on the update check in <b>Settings</b>, or choose <b>Check for Updates…</b> (on a Mac in the JobSquirrel menu; on Windows and Linux, click <b>☰</b>, then <b>Help</b>). When there is a new version, a card in the corner of the window offers it. Click <b>Update</b>: JobSquirrel downloads it from GitHub, checks that it is ours, installs it and starts again. With the Linux .deb, it asks for your password first. Nothing is downloaded before you click, and your jobs are not touched.</p>
 
         <h3 id="uninstall">Uninstall</h3>
         <p>Your jobs stay in your library folder until you delete it yourself.</p>
@@ -100,6 +101,7 @@
           <li>In Chrome, go to <kbd>chrome://extensions</kbd> and remove the extension.</li>
           <li>If you chatted with an AI, the copies made for it are in <b>Saved-Jobs-Chats</b> in your home folder; delete it if you no longer want them.</li>
           <li>On a Mac, to remove its settings too, delete <b>Saved-Jobs-Extension</b> in your home folder, and <b>Application Support/JobSquirrel</b> and <b>Logs/JobSquirrel</b> in your Library folder.</li>
+          <li>On Linux, to remove its settings too, delete these folders in your home folder: <b>Saved-Jobs-Extension</b>, <b>.config/JobSquirrel</b> and <b>.local/state/JobSquirrel</b>. Also delete <b>nz.hireme.link.json</b> in <b>.config/google-chrome/NativeMessagingHosts</b>.</li>
         </ol>
       </section>
 
@@ -211,6 +213,7 @@
         <details id="connection">
           <summary>The popup says “Open JobSquirrel to save”</summary>
           <p>The extension can only save when the app is running. Open JobSquirrel, then click <b>Try Again</b>. If it still says this, quit JobSquirrel and Chrome, open JobSquirrel first, then Chrome.</p>
+          <p>On Linux, a Chrome or Chromium installed as a Snap or Flatpak cannot reach the app. Ubuntu’s own Chromium is a Snap. Install Chrome from google.com/chrome.</p>
         </details>
         <details>
           <summary>Some details are missing after I click the squirrel</summary>
@@ -246,6 +249,7 @@
           <tr><td><kbd>⌘</kbd> <kbd>→</kbd> / <kbd>⌘</kbd> <kbd>←</kbd></td><td>Move the job to the next or previous status</td></tr>
           <tr><td><kbd>⌘</kbd> <kbd>⌫</kbd></td><td>Move the job to the Trash</td></tr>
           <tr><td><kbd>Esc</kbd></td><td>Close a menu or the job card on the Board</td></tr>
+          <tr><td><kbd>Alt</kbd> or <kbd>F10</kbd></td><td>Open the menu (Windows and Linux)</td></tr>
         </table>
       </section>
     </main>

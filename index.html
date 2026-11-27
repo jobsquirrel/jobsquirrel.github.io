@@ -58,7 +58,7 @@
       <a class="btn primary" href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-Chrome-extension.zip">Download Chrome extension</a>
       <a class="btn ghost" href="https://github.com/foxnz/landfern">Star on GitHub</a>
     </div>
-    <p class="small">Free · No account · macOS 14 or later · Windows 10 or 11 (<a href="#windows-warning">if it warns you</a>) · Linux: <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-amd64.deb">.deb</a> or <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-x86_64.AppImage">AppImage</a> (<a href="help.html#install">which one?</a>)</p>
+    <p class="small">Free · No account · macOS 14 or later · Windows 10 or 11 (<a href="#windows-warning">if it warns you</a>) · Linux (x64): <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-amd64.deb">.deb</a> or <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-x86_64.AppImage">AppImage</a> (<a href="help.html#install">which one?</a>)</p>
     <p class="small">Get both: the app and the Chrome extension. <a href="#extension">How to add it</a></p>
     <div class="tour">
       <div class="tour-tabs" role="tablist" aria-label="Look inside JobSquirrel">
@@ -318,6 +318,7 @@
         <a class="btn primary" href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-Chrome-extension.zip">Download Chrome extension</a>
         <a class="btn ghost" href="contact.html">Send feedback</a>
       </div>
+      <p class="small">Linux: <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-amd64.deb">.deb</a> or <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-x86_64.AppImage">AppImage</a> (<a href="help.html#install">which one?</a>)</p>
     </div>
   </section>
 
@@ -326,11 +327,15 @@
       <h2>Questions</h2>
       <details>
         <summary>What do I need?</summary>
-        <p>A Mac with macOS 14 or later, or a 64-bit PC with Windows 10 or 11 or with Linux, and Google Chrome.</p>
+        <p>A Mac with macOS 14 or later, a 64-bit PC with Windows 10 or 11, or a 64-bit Intel or AMD PC with Linux. And Google Chrome; on Linux, from google.com/chrome, not a Snap or Flatpak.</p>
       </details>
       <details>
         <summary>Windows warns me about the download</summary>
         <p id="windows-warning">The Windows version is not signed yet. Click <b>More info</b>, then <b>Run anyway</b>. If there is no <b>Run anyway</b>, it can’t be installed on that PC yet. Download it only from this website or our <a href="https://github.com/foxnz/landfern/releases/latest">download page</a>.</p>
+      </details>
+      <details>
+        <summary>Linux: the .deb or the AppImage?</summary>
+        <p>On Ubuntu, Debian and Linux Mint, use the .deb. On Ubuntu 24.04 and later, JobSquirrel won’t run from the AppImage, because Ubuntu doesn’t give it the security sandbox JobSquirrel needs. On other Linux, use the AppImage. <a href="help.html#install">How to install</a></p>
       </details>
       <details>
         <summary>Can an AI help me with an application?</summary>
