@@ -28,7 +28,9 @@
   kbd { font: .85em/1 ui-monospace, Menlo, monospace; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; padding: 2px 6px; background: var(--card); color: var(--fg); white-space: nowrap; }
   .keys { width: 100%; border-collapse: collapse; margin-top: 12px; }
   .keys td { padding: 8px 6px; border-bottom: 1px dashed var(--line); vertical-align: top; }
-  .keys td:first-child { width: 9rem; }
+  .keys td:first-child, .keys td:nth-child(2) { width: 10rem; }
+  .keys th { text-align: left; font-weight: 600; padding: 4px 6px; color: var(--muted); }
+  @media (max-width: 600px) { .keys td:first-child, .keys td:nth-child(2) { width: auto; } .keys td { padding: 8px 4px; } .keys kbd { padding: 0 3px; } }
   .status-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 6px; }
   .status-list i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; }
   @media (max-width: 760px) {
@@ -79,7 +81,7 @@
         <ol class="do">
           <li>Download JobSquirrel: <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel.dmg"><b>for Mac</b></a> (macOS 14 or later), <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-Setup.exe"><b>for Windows</b></a> (10 or 11, 64-bit), or for Linux (64-bit Intel or AMD): the <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-amd64.deb"><b>.deb</b></a> for Ubuntu, Debian and Linux Mint, or the <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-x86_64.AppImage"><b>AppImage</b></a> for other distributions.</li>
           <li>Mac: open the download and drag JobSquirrel into your <b>Applications</b> folder. Windows: open the download; if Windows warns you, click <b>More info</b>, then <b>Run anyway</b>. Linux: open the .deb to install it, or run <kbd>sudo apt install ./JobSquirrel-amd64.deb</kbd> in the folder you downloaded it to. On other distributions, make the AppImage executable (<b>Properties</b> → <b>Allow executing as program</b>) and open it. On Ubuntu 24.04 and later, use the .deb: it sets up the security sandbox JobSquirrel needs, which Ubuntu does not give AppImages. If you open the AppImage there, JobSquirrel tells you and offers the .deb. Use Chrome from <a href="https://www.google.com/chrome/">google.com/chrome</a>: a Chrome or Chromium installed as a Snap or Flatpak cannot reach the app. Ubuntu’s own Chromium is a Snap.</li>
-          <li>The first time, JobSquirrel shows its start page. Click <b>Create</b>, then <b>Create</b> again, to make a library called <b>Saved-Jobs</b> in your home folder; you can give it another name, or choose another place with <b>Browse…</b>. That is where your jobs are kept. Already have a library? Click <b>Open</b> and choose its folder.</li>
+          <li>The first time, JobSquirrel shows its start page. Click <b>Create</b>, then <b>Create</b> again, to make a library called <b>Saved-Jobs</b> in your home folder; you can give it another name, or choose another place with <b>Browse…</b>. That is where your jobs are kept. If you already have a <b>Saved-Jobs</b> library in your home folder, the start page lists it: click it to open it. Already have a library somewhere else? Click <b>Open</b> and choose its folder.</li>
           <li>Moved your library, or keep it on a drive? If JobSquirrel can't find it, the start page lists it with <b>Locate…</b>, and a library on a drive opens by itself when you connect the drive.</li>
         </ol>
         <picture><source media="(prefers-color-scheme: dark)" srcset="screens/start-page-dark.png"><img class="shot" src="screens/start-page.png" width="1000" height="625" loading="lazy" alt="The start page: New library with Create, and Open library with Open."></picture>
@@ -87,25 +89,26 @@
 
         <h3>2. The Chrome extension</h3>
         <ol class="do">
-          <li>On JobSquirrel's first screen, click <b>Open Extensions</b> (on Windows, in Chrome click <b>⋮</b> → <b>Extensions</b> → <b>Manage Extensions</b>; on Linux, click <b>Copy Address</b> and paste it into Chrome's address bar), or type <kbd>chrome://extensions</kbd> in Chrome. Turn on <b>Developer mode</b> (top right). Leave it on: Chrome turns the extension off without it.</li>
-          <li><a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-Chrome-extension.zip"><b>Download the extension</b></a> and drag the downloaded file onto that page. No need to unzip it. JobSquirrel's first screen shows a check mark when it is connected.</li>
+          <li>On JobSquirrel's first screen, click <b>Open Extensions</b> (on Windows, click <b>Open Chrome</b>, then <b>⋮</b> → <b>Extensions</b> → <b>Manage Extensions</b>; on Linux, click <b>Copy Address</b> and paste it into Chrome's address bar), or type <kbd>chrome://extensions</kbd> in Chrome. Turn on <b>Developer mode</b> (top right). Leave it on: Chrome turns the extension off without it.</li>
+          <li>Drag the <b>JobSquirrel extension</b> tile from JobSquirrel's first screen onto that page. You also find the tile in <b>Help → Get the Extension…</b> (on Windows and Linux, click <b>☰</b>, then <b>Help</b>). This copy updates itself. Can't drag? <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-Chrome-extension.zip"><b>Download the extension</b></a> and drag the downloaded file in instead; no need to unzip it. JobSquirrel's first screen shows a check mark when it is connected.</li>
           <li>The squirrel is in Chrome's toolbar. Not there? Click the puzzle piece and pin <b>JobSquirrel</b>.</li>
         </ol>
-        <p><b>Removed it by accident?</b> In JobSquirrel, choose <b>Help → Get the Extension…</b>, or <b>Add to Chrome…</b> in Settings. Then download it and drag it in again. Your saved jobs are not affected.</p>
-        <p><b>A new version?</b> Download the extension again and drag it onto the same page. If you added it from a <b>Saved-Jobs-Extension</b> folder before, it updates itself; keep that folder.</p>
+        <p><b>Removed it by accident?</b> In JobSquirrel, choose <b>Help → Get the Extension…</b>, or <b>Add to Chrome…</b> in Settings. Then drag the tile in again (or download it). Your saved jobs are not affected.</p>
+        <p><b>A new version?</b> If you added it by dragging the tile from the app, it updates itself. If you added the downloaded file, download the new one and drag it in again.</p>
 
         <h3 id="updates">New versions of the app</h3>
-        <p>JobSquirrel checks for a new version once a day, and you can choose <b>Check for Updates…</b> any time (on a Mac in the JobSquirrel menu; on Windows and Linux, click <b>☰</b>, then <b>Help</b>). When there is one, a card in the corner of the window shows what is new. Click <b>Update</b>: JobSquirrel downloads it from GitHub and checks that it is ours. The status bar along the bottom of the window shows how far it has got. On a Mac it installs when you quit, or click <b>Restart Now</b>; on Windows and Linux, click <b>Restart to Update</b>. With the Linux .deb, it asks for your password first. Your jobs are not touched.</p>
-        <p>In <b>Settings</b> (on Windows and Linux at the bottom, under <b>About</b>) you see your version and where the update stands. Two switches are there: <b>Check for updates automatically</b>, which is on, and <b>Download updates automatically</b>, which is off until you turn it on (not offered for the Linux .deb).</p>
+        <p>JobSquirrel checks for a new version once a day, and you can choose <b>Check for Updates…</b> any time (on a Mac in the JobSquirrel menu; on Windows and Linux, click <b>☰</b>, then <b>Help</b>). When there is one, a card in the corner of the window shows what is new. Click <b>Update</b>: JobSquirrel downloads it from GitHub and checks that it is ours. While it downloads, you can tuck the card away with <b>–</b>; the status bar at the bottom keeps showing how far it has got, and a click on it brings the card back. On a Mac it installs when you quit, or click <b>Restart Now</b>. On Windows, click <b>Restart to Update</b>; on Linux, click <b>Restart</b>. With the Linux .deb, it asks for your password first. Your jobs are not touched.</p>
+        <p>On a Mac, <b>Settings</b> has an <b>Updates</b> group that shows where the update stands, with <b>Check Now</b>; your version is in <b>About JobSquirrel</b> in the JobSquirrel menu. On Windows and Linux, this is at the bottom of <b>Settings</b>, under <b>About</b>, with your version. Two switches are there: <b>Check for updates automatically</b>, which is on, and <b>Download updates automatically</b>, which is off until you turn it on (not offered for the Linux .deb).</p>
 
         <h3 id="uninstall">Uninstall</h3>
         <p>Your jobs stay in your library folder until you delete it yourself.</p>
         <ol class="do">
-          <li>In JobSquirrel's Settings, turn off opening at login. Then quit JobSquirrel and drag it from <b>Applications</b> to the Trash. On Windows, uninstall it in <b>Settings → Apps</b>. On Linux, remove the .deb in your software centre or with <kbd>sudo apt remove jobsquirrel</kbd>, or delete the AppImage.</li>
+          <li>On a Mac or Linux, first turn off <b>Open JobSquirrel when I log in</b> in Settings. On a Mac, then quit JobSquirrel and drag it from <b>Applications</b> to the Trash. On Windows, uninstall it in <b>Settings → Apps</b>; this also stops it opening when you sign in and removes its link with Chrome. On Linux, remove the .deb in your software centre or with <kbd>sudo apt remove jobsquirrel</kbd>, or delete the AppImage.</li>
           <li>In Chrome, go to <kbd>chrome://extensions</kbd> and remove the extension.</li>
           <li>If you chatted with an AI, the copies made for it are in <b>Saved-Jobs-Chats</b> in your home folder; delete it if you no longer want them.</li>
-          <li>On a Mac, to remove its settings too, delete <b>Saved-Jobs-Extension</b> in your home folder, and <b>Application Support/JobSquirrel</b> and <b>Logs/JobSquirrel</b> in your Library folder.</li>
+          <li>On a Mac, to remove its settings too, delete <b>Saved-Jobs-Extension</b> in your home folder, and <b>Application Support/JobSquirrel</b> and <b>Logs/JobSquirrel</b> in your Library folder, and Chrome's link file <b>nz.hireme.link.json</b> in <b>Library/Application Support/Google/Chrome/NativeMessagingHosts</b>.</li>
           <li>On Linux, to remove its settings too, delete these folders in your home folder: <b>Saved-Jobs-Extension</b>, <b>.config/JobSquirrel</b> and <b>.local/state/JobSquirrel</b>. Also delete <b>nz.hireme.link.json</b> in <b>.config/google-chrome/NativeMessagingHosts</b>.</li>
+          <li>On Windows, to remove its settings too, delete <b>Saved-Jobs-Extension</b> in your home folder and the <b>JobSquirrel</b> folder in <b>%LOCALAPPDATA%</b>.</li>
         </ol>
       </section>
 
@@ -146,7 +149,7 @@
         <h2>Find your jobs</h2>
         <p>The window has three parts: the sidebar on the left, your jobs in the middle, and the details of the selected job on the right.</p>
         <h3>Sidebar</h3>
-        <p><b>All Jobs</b> shows everything. <b>Unfiled</b> shows jobs not in a folder. Below them are your folders, your tags, your saved filters and the Trash. Click any of them to see just those jobs. Under <b>Documents</b>, <b>CVs</b> and <b>Cover letters</b> list every file you added and the jobs you used it for.</p>
+        <p><b>All Jobs</b> shows everything. <b>Unfiled</b> shows jobs not in a folder. Below them are your folders, your tags and saved filters once you have some, and the Trash. With no folders yet, <b>Folders</b> shows <b>New Folder…</b>. Click any of them to see just those jobs. Under <b>Documents</b>, <b>CVs</b> and <b>Cover letters</b> list every file you added and the jobs you used it for.</p>
         <h3>Filters</h3>
         <p>Above the list, click <b>Status</b>, <b>Company</b>, <b>Location</b>, <b>Folder</b>, <b>Tag</b> or <b>Source</b> and tick what you want to see. Each choice shows how many jobs match. Ticking two options in one filter shows jobs with either; using two filters shows jobs that match both. Click <b>Clear</b> to see all jobs again. Click a company or place in a job's details to see all jobs there.</p>
         <p>When you use a set of filters often, click <b>Save Filter…</b> and give it a name. It appears in the sidebar.</p>
@@ -154,8 +157,9 @@
         <h3>Board, Table and List</h3>
         <p><b>Board</b> shows a column for each status, so you can see where every application stands. Click the arrow in a column's heading to fold it into a thin strip, and click the strip to open it again; <b>Rejected</b> starts folded. <b>Table</b> shows every detail as a spreadsheet; click a column's heading to sort by it. <b>List</b> shows your jobs one under another. <b>Sort</b> changes the order. JobSquirrel remembers which one you used last.</p>
         <p>The two buttons at the top corners of the window show or hide the sidebar and the details.</p>
+        <p>The bar along the bottom shows how many jobs the list holds, and how an update is going. Hide it with <b>View → Hide Status Bar</b> (on Windows and Linux, <b>View → Status Bar</b>).</p>
         <h3>Search</h3>
-        <p>Type in <b>Search jobs</b> to find jobs by title, company, place, tag or folder.</p>
+        <p>Type in <b>Search jobs</b> to find jobs by title, company, place, tag or folder. Press <kbd>⌘</kbd> <kbd>K</kbd> (<kbd>Ctrl</kbd> <kbd>K</kbd> on Windows and Linux) to jump to a job by its title or company.</p>
       </section>
 
       <section id="track">
@@ -176,7 +180,7 @@
         <p>Give a job a follow-up date and JobSquirrel reminds you at 9 am that day, or at the time you choose. For a job still marked Interested that has a closing date, it also reminds you 3 days before it closes and on the closing day. The bell at the top right lists the reminders of the past week; click one to open its job.</p>
         <p>Reminders come while JobSquirrel is running, even with its window closed. Reminders you missed show the next time you open it. To have it running every day, turn on <b>Open JobSquirrel when I log in</b> (on Windows, <b>when I sign in</b>) in Settings.</p>
         <h3>The saved page</h3>
-        <p>The <b>Saved Page</b> tab shows the copy of the ad as it was when you saved it. <b>Open Original</b> opens the live ad in your browser, if it is still there.</p>
+        <p>The <b>Saved Page</b> tab shows the copy of the ad as it was when you saved it. <b>Open Original</b> opens the live ad in your browser, if it is still there. <b>Open Larger</b> shows the copy in a larger window of its own.</p>
       </section>
 
       <section id="chat">
@@ -195,11 +199,12 @@
       <section id="folders">
         <h2>Folders and libraries</h2>
         <h3>Folders</h3>
-        <p>Move your pointer over the sidebar and click <b>+</b> next to <b>Folders</b>, or choose <b>File → New Folder</b>. Type a name and press Return. Put a job in a folder from its details, from <b>Job → Move to Folder</b>, or by dragging it onto the folder in the sidebar. A job lives in one folder; use tags when it belongs in more than one place.</p>
+        <p>Move your pointer over the sidebar and click <b>+</b> next to <b>Folders</b>, or choose <b>File → New Folder</b>. Type a name and press Return (Enter on Windows and Linux). Put a job in a folder from its details, from <b>Job → Move to Folder</b>, or by dragging it onto the folder in the sidebar. A job lives in one folder; use tags when it belongs in more than one place.</p>
         <p>Right-click a folder to see <b>Rename</b>, <b>Delete…</b> and <b>New Folder</b>. You can also double-click a folder to rename it. When you delete a folder, its jobs move to Unfiled and no job is deleted. Right-click a tag or a saved filter and choose <b>Delete…</b> to delete it.</p>
         <h3>Libraries</h3>
         <p>A library is a folder on your computer that holds a set of jobs, for example one for each job hunt. Click the library name at the bottom left to switch library, make a new one, or open one from another place.</p>
         <p>If a library has been moved or is on a drive that isn't connected, JobSquirrel says it can't find it. Click <b>Locate…</b> to show it where the library is now, or connect the drive and it opens by itself. Nothing in the library is changed.</p>
+        <p>If your library is in iCloud Drive, Dropbox or OneDrive, a change made on another computer shows here while JobSquirrel is open; when both computers change different details of a job, both are kept.</p>
       </section>
 
       <section id="data">
@@ -240,20 +245,25 @@
       <section id="keys">
         <h2>Keyboard shortcuts</h2>
         <table class="keys">
-          <tr><td><kbd>⌘</kbd> <kbd>1</kbd></td><td>Show as Board</td></tr>
-          <tr><td><kbd>⌘</kbd> <kbd>2</kbd></td><td>Show as Table</td></tr>
-          <tr><td><kbd>⌘</kbd> <kbd>3</kbd></td><td>Show as List</td></tr>
-          <tr><td><kbd>⌘</kbd> <kbd>F</kbd></td><td>Search jobs</td></tr>
-          <tr><td><kbd>⌘</kbd> <kbd>N</kbd></td><td>New folder</td></tr>
-          <tr><td><kbd>⌃</kbd> <kbd>⌘</kbd> <kbd>S</kbd></td><td>Show or hide the sidebar</td></tr>
-          <tr><td><kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd></td><td>Show or hide the job details</td></tr>
-          <tr><td><kbd>⌘</kbd> <kbd>,</kbd></td><td>Open Settings</td></tr>
-          <tr><td><kbd>↑</kbd> <kbd>↓</kbd></td><td>Select the job above or below</td></tr>
-          <tr><td><kbd>⌘</kbd>-click or <kbd>⇧</kbd>-click</td><td>Select several jobs, to move them to a folder or the Trash together</td></tr>
-          <tr><td><kbd>⌘</kbd> <kbd>→</kbd> / <kbd>⌘</kbd> <kbd>←</kbd></td><td>Move the job to the next or previous status</td></tr>
-          <tr><td><kbd>⌘</kbd> <kbd>⌫</kbd></td><td>Move the job to the Trash</td></tr>
-          <tr><td><kbd>Esc</kbd></td><td>Close a menu or the job card on the Board</td></tr>
-          <tr><td><kbd>Alt</kbd> or <kbd>F10</kbd></td><td>Open the menu (Windows and Linux)</td></tr>
+          <tr><th>Mac</th><th>Windows and Linux</th><th></th></tr>
+          <tr><td><kbd>⌘</kbd> <kbd>1</kbd></td><td><kbd>Ctrl</kbd> <kbd>1</kbd></td><td>Show as Board</td></tr>
+          <tr><td><kbd>⌘</kbd> <kbd>2</kbd></td><td><kbd>Ctrl</kbd> <kbd>2</kbd></td><td>Show as Table</td></tr>
+          <tr><td><kbd>⌘</kbd> <kbd>3</kbd></td><td><kbd>Ctrl</kbd> <kbd>3</kbd></td><td>Show as List</td></tr>
+          <tr><td><kbd>⌘</kbd> <kbd>F</kbd></td><td><kbd>Ctrl</kbd> <kbd>F</kbd></td><td>Search jobs</td></tr>
+          <tr><td><kbd>⌘</kbd> <kbd>K</kbd></td><td><kbd>Ctrl</kbd> <kbd>K</kbd></td><td>Quick Open: jump to a job by its title or company</td></tr>
+          <tr><td><kbd>⌘</kbd> <kbd>N</kbd></td><td><kbd>Ctrl</kbd> <kbd>N</kbd></td><td>New folder</td></tr>
+          <tr><td><kbd>⌃</kbd> <kbd>⌘</kbd> <kbd>S</kbd></td><td><kbd>Ctrl</kbd> <kbd>B</kbd></td><td>Show or hide the sidebar</td></tr>
+          <tr><td><kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>I</kbd></td><td><kbd>Ctrl</kbd> <kbd>⇧</kbd> <kbd>B</kbd></td><td>Show or hide the right panel, with the job details</td></tr>
+          <tr><td><kbd>⌘</kbd> <kbd>/</kbd></td><td>—</td><td>Show or hide the status bar</td></tr>
+          <tr><td><kbd>⌘</kbd> <kbd>,</kbd></td><td><kbd>Ctrl</kbd> <kbd>,</kbd></td><td>Open Settings</td></tr>
+          <tr><td><kbd>↑</kbd> <kbd>↓</kbd></td><td><kbd>↑</kbd> <kbd>↓</kbd></td><td>Select the job above or below</td></tr>
+          <tr><td><kbd>⌘</kbd>-click or <kbd>⇧</kbd>-click</td><td><kbd>Ctrl</kbd>-click or <kbd>⇧</kbd>-click</td><td>Select several jobs, to move them to a folder or the Trash together</td></tr>
+          <tr><td><kbd>⌘</kbd> <kbd>→</kbd> / <kbd>⌘</kbd> <kbd>←</kbd></td><td><kbd>Ctrl</kbd> <kbd>→</kbd> / <kbd>Ctrl</kbd> <kbd>←</kbd></td><td>Move the job to the next or previous status</td></tr>
+          <tr><td><kbd>⌘</kbd> <kbd>⌫</kbd></td><td><kbd>Delete</kbd></td><td>Move the job to the Trash</td></tr>
+          <tr><td><kbd>⌥</kbd> <kbd>⌘</kbd> <kbd>T</kbd></td><td><kbd>Ctrl</kbd> <kbd>⇧</kbd> <kbd>T</kbd></td><td>Chat about this job</td></tr>
+          <tr><td><kbd>⌘</kbd> <kbd>?</kbd></td><td><kbd>F1</kbd></td><td>Open this help</td></tr>
+          <tr><td><kbd>Esc</kbd></td><td><kbd>Esc</kbd></td><td>Close a menu or the job card on the Board</td></tr>
+          <tr><td>—</td><td><kbd>Alt</kbd> or <kbd>F10</kbd></td><td>Open the menu</td></tr>
         </table>
       </section>
     </main>
