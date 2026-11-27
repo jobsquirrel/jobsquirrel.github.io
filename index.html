@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>JobSquirrel: your all-in-one job hunting dashboard</title>
-<meta name="description" content="Your personal all-in-one job hunting dashboard. A free app that saves any job ad with one click, and see every application, deadline, interview and CV on one screen. Free, for Mac, Windows and Linux.">
+<meta name="description" content="Your personal all-in-one job hunting dashboard. An app that saves the job ads you find, then keeps every application, deadline, interview and CV in one place. Free during the beta, for Mac, Windows and Linux.">
 <link rel="icon" href="squirrel.svg" type="image/svg+xml">
 <meta property="og:title" content="JobSquirrel: your all-in-one job hunting dashboard">
-<meta property="og:description" content="Save any job ad with one click. See every application, deadline, interview and CV on one screen.">
+<meta property="og:description" content="Save the job ads you find. Keep every application, deadline, interview and CV in one place.">
 <meta property="og:url" content="https://jobsquirrel.nz/">
 <meta property="og:image" content="https://jobsquirrel.nz/screens/board.png">
 <link rel="stylesheet" href="style.css">
@@ -51,19 +51,19 @@
 <ellipse class="ink thin" cx="150" cy="44" rx="7" ry="9"/><path class="ink thin" d="M142 39 C142 31 158 31 158 39 Z"/></g>
 </g></svg>
     <h1>Your personal all-in-one <u>job hunting dashboard.</u></h1>
-    <p>A free app that saves any job ad with one click, then keeps every application, deadline, interview and CV on one screen.</p>
+    <p>An app that saves the job ads you find, then keeps every application, deadline, interview and CV in one place.</p>
     <div class="get">
       <div class="card"><div class="step">1</div><h3>The app</h3><p>Keeps your job library on your computer.</p>
         <a class="btn primary" data-app href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel.dmg">Download for Mac</a>
         <p class="other">All systems: <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel.dmg">Mac</a> · <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-Setup.exe">Windows</a> · Linux <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-amd64.deb">.deb</a> or <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-x86_64.AppImage">AppImage</a></p></div>
       <svg class="plus" viewBox="0 0 30 30" aria-hidden="true"><path class="ink" d="M15 4 C14 12 16 19 15 26 M4 15 C12 14 19 16 26 15" filter="url(#rough)"/></svg>
-      <div class="card"><div class="step">2</div><h3>The Chrome extension</h3><p>Saves a job ad into the app with one click.</p>
+      <div class="card"><div class="step">2</div><h3>The Chrome extension</h3><p>Saves the job ad you are reading into the app.</p>
         <a class="btn primary" href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-Chrome-extension.zip">Download the extension</a>
         <p class="other"><a href="#extension">How to add it</a>. The app shows you too.</p></div>
     </div>
     <p class="small">You need both: the extension saves into the app.</p>
     <div class="cta"><a class="btn ghost" href="https://github.com/foxnz/landfern">Star on GitHub</a></div>
-    <p class="small">Free · No account · macOS 14 or later · Windows 10 or 11 (<a href="#windows-warning">if it warns you</a>) · Linux (x64): .deb for Ubuntu, Debian and Mint, AppImage for others (<a href="help.html#install">which one?</a>)</p>
+    <p class="small">Free during the beta · No account · macOS 14 or later · Windows 10 or 11 (<a href="#windows-warning">if it warns you</a>) · Linux (x64): .deb for Ubuntu, Debian and Mint, AppImage for others (<a href="help.html#install">which one?</a>)</p>
     <div class="tour">
       <div class="tour-tabs" role="tablist" aria-label="Look inside JobSquirrel">
         <button type="button" role="tab" id="tour-board" aria-controls="tour-panel" aria-selected="true" tabindex="0" data-shot="board">Board</button>
@@ -88,7 +88,7 @@
       <div class="swaps">
         <div class="card"><p><s>The ad is gone before your interview.</s></p><p><b>You keep your own copy of it.</b></p></div>
         <div class="card"><p><s>“Which CV did I send them?”</s></p><p><b>It’s right there, with the job.</b></p></div>
-        <div class="card"><p><s>You missed the closing date.</s></p><p><b>You get a reminder first.</b></p></div>
+        <div class="card"><p><s>You missed the closing date.</s></p><p><b>You get a reminder first, when you know the date.</b></p></div>
         <div class="card"><p><s>A spreadsheet you stopped updating.</s></p><p><b>A board. Drag a card, done.</b></p></div>
       </div>
     </div>
@@ -101,8 +101,8 @@
       <div class="feature" id="save">
         <div class="feature-text">
           <h3>Save with a click.</h3>
-          <p>Spotted a role on Seek, LinkedIn or Trade Me Jobs? Click the squirrel in Chrome’s toolbar. JobSquirrel fills in the title, company, pay, location and closing date, and keeps a full copy of the ad.</p>
-          <ul class="points"><li>Seek, LinkedIn, Indeed, Trade Me Jobs and any other job page</li><li><b>Show in App</b> takes you straight to it</li><li>Saved it before? The squirrel says so</li></ul>
+          <p>Spotted a role on Seek, LinkedIn or Trade Me Jobs? Click the squirrel in Chrome’s toolbar. JobSquirrel fills in what the ad shows, such as the title, company, pay and location, and keeps a full copy of the ad.</p>
+          <ul class="points"><li>Seek, LinkedIn, Indeed, Trade Me Jobs, and a copy of other job pages too</li><li><b>Show in App</b> takes you straight to it</li><li>Saved it before? The popup says so</li></ul>
         </div>
         <figure class="shot"><img src="screens/save-job.gif" width="1600" height="1000" loading="lazy" alt="On a job ad in Chrome, a click on the squirrel saves the job, and Show in App opens it in JobSquirrel."></figure>
       </div>
@@ -112,7 +112,7 @@
           <p>Ads come down when the job closes, often just before your interview. Your copy stays, as the ad looked, and opens without the internet.</p>
           <ul class="points"><li>The whole ad: the role, what they want, how to apply</li><li><b>Open Original</b> when the live ad is still there</li></ul>
         </div>
-        <figure class="shot crop" style="--ar: 1 / 1; --pos: right top"><picture><source media="(prefers-color-scheme: dark)" srcset="screens/saved-page-dark.png"><img src="screens/saved-page.png" width="1600" height="1000" loading="lazy" alt="A job selected in the list, with its saved copy of the ad at the right."></picture></figure>
+        <figure class="shot"><picture><source media="(prefers-color-scheme: dark)" srcset="screens/saved-page-dark.png"><img src="screens/saved-page.png" width="1600" height="1000" loading="lazy" alt="A job selected in the list, with its saved copy of the ad at the right."></picture></figure>
       </div>
       <div class="feature" id="track">
         <div class="feature-text">
@@ -124,8 +124,8 @@
       </div>
       <div class="feature flip" id="find">
         <div class="feature-text">
-          <h3>Find any job in seconds.</h3>
-          <p>Search everything you saved, then narrow it down by status, company, location, folder, tag or site. Keep the filters you use often in the sidebar.</p>
+          <h3>Find it again.</h3>
+          <p>Search your jobs, then narrow them down by status, company, location, folder, tag or site. Keep the filters you use often in the sidebar.</p>
           <ul class="points"><li>Finds jobs by title, company, place, tag or folder</li><li>Saved filters, one click away</li></ul>
         </div>
         <figure class="shot"><img src="screens/search-filter.gif" width="1600" height="1000" loading="lazy" alt="Typing “developer” in Search, then choosing a status, narrows the list."></figure>
@@ -148,7 +148,7 @@
       </div>
       <div class="feature" id="seek">
         <div class="feature-text">
-          <h3>Never read an ad twice.</h3>
+          <h3>Spot what you saved.</h3>
           <p>On Seek’s search results, the jobs you saved carry a label with their status.</p>
           <ul class="points"><li>Turn it on in the extension’s settings</li><li>Checked against your own library, on your computer</li></ul>
         </div>
@@ -164,11 +164,11 @@
         <div class="card"><div class="icon" aria-hidden="true">⏰</div><h3>Reminders</h3><p>Before a closing date, and on the day you planned to follow up.</p></div>
         <div class="card"><div class="icon" aria-hidden="true">📁</div><h3>Folders and tags</h3><p>One folder for each hunt, tags for everything else.</p></div>
         <div class="card"><div class="icon" aria-hidden="true">📚</div><h3>Several libraries</h3><p>Keep this year’s hunt apart from the last one.</p></div>
-        <div class="card"><div class="icon" aria-hidden="true">📦</div><h3>Back up in one go</h3><p><b>Export Backup…</b> puts everything in one zip file.</p></div>
+        <div class="card"><div class="icon" aria-hidden="true">📦</div><h3>Back up in one go</h3><p><b>Export Backup…</b> puts a whole library in one zip file.</p></div>
         <div class="card"><div class="icon" aria-hidden="true">🗑️</div><h3>A Trash</h3><p>Deleted by mistake? Restore it.</p></div>
-        <div class="card"><div class="icon" aria-hidden="true">⬆️</div><h3>One-click updates</h3><p>When a new version is out, a card shows what is new. Click <b>Update</b>.</p></div>
+        <div class="card"><div class="icon" aria-hidden="true">⬆️</div><h3>Updates in the app</h3><p>When a new version is out, a card shows what is new. Click <b>Update</b>, then restart.</p></div>
         <div class="card"><div class="icon" aria-hidden="true">🌙</div><h3>Light and dark</h3><p>Follows your computer’s setting.</p></div>
-        <div class="card"><div class="icon" aria-hidden="true">⌨️</div><h3>Keyboard shortcuts</h3><p>For people who never touch the mouse. <a href="help.html#keys">See them</a></p></div>
+        <div class="card"><div class="icon" aria-hidden="true">⌨️</div><h3>Keyboard shortcuts</h3><p>Keys for the things you do most. <a href="help.html#keys">See them</a></p></div>
       </div>
     </div>
   </section>
@@ -306,9 +306,9 @@
       <h2>Rest easy.</h2>
       <p class="lead">Your job hunt is your business. It stays on your computer: we can’t see it, and we don’t want to.</p>
       <div class="more three">
-        <div class="card"><div class="icon" aria-hidden="true">💻</div><h3>On your computer</h3><p>Your jobs are plain files in a folder you choose. No cloud.</p></div>
-        <div class="card"><div class="icon" aria-hidden="true">🙈</div><h3>No account, no tracking</h3><p>Nothing to sign up for. No ads, no analytics.</p></div>
-        <div class="card"><div class="icon" aria-hidden="true">🔒</div><h3>Nothing about you is sent</h3><p>The extension reads a job ad only when you click it. JobSquirrel only asks GitHub for new versions, and you can turn that off.</p></div>
+        <div class="card"><div class="icon" aria-hidden="true">💻</div><h3>On your computer</h3><p>Your jobs are plain files in a folder you choose.</p></div>
+        <div class="card"><div class="icon" aria-hidden="true">🙈</div><h3>No account, no ads</h3><p>Nothing to sign up for.</p></div>
+        <div class="card"><div class="icon" aria-hidden="true">🔒</div><h3>Your jobs stay with you</h3><p>The extension reads a job ad only when you click it. Once a day the app asks GitHub for the newest version; GitHub counts these checks, and we see only the daily total. You can turn it off in <b>Settings</b>.</p></div>
       </div>
     </div>
   </section>
@@ -322,7 +322,7 @@
           <a class="btn primary" data-app href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel.dmg">Download for Mac</a>
           <p class="other">All systems: <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel.dmg">Mac</a> · <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-Setup.exe">Windows</a> · Linux <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-amd64.deb">.deb</a> or <a href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-x86_64.AppImage">AppImage</a></p></div>
         <svg class="plus" viewBox="0 0 30 30" aria-hidden="true"><path class="ink" d="M15 4 C14 12 16 19 15 26 M4 15 C12 14 19 16 26 15" filter="url(#rough)"/></svg>
-        <div class="card"><div class="step">2</div><h3>The Chrome extension</h3><p>Saves a job ad into the app with one click.</p>
+        <div class="card"><div class="step">2</div><h3>The Chrome extension</h3><p>Saves the job ad you are reading into the app.</p>
           <a class="btn primary" href="https://github.com/foxnz/landfern/releases/latest/download/JobSquirrel-Chrome-extension.zip">Download the extension</a>
           <p class="other"><a href="#extension">How to add it</a>. The app shows you too.</p></div>
       </div>
